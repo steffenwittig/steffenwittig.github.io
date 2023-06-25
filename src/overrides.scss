@@ -1,0 +1,33 @@
+@import 'variables';
+
+// overriding some of picocss' variables
+h1,
+h2 {
+  --typography-spacing-vertical: 1rem;
+  --font-weight: lighter;
+}
+
+:root {
+  --primary: #dd2c61;
+  --primary-hover: rgb(26, 175, 167);
+}
+
+//
+// light theme
+//
+[data-theme='light'],
+:root:not([data-theme='dark']) {
+  --primary: #{$color-primary};
+  --primary-hover: #{$color-primary-hover};
+}
+
+//
+// dark theme
+//
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --primary: #{$color-primary};
+    --primary-hover: #{$color-primary-hover};
+    --background-color: #{$color-background};
+  }
+}

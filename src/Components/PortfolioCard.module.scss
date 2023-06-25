@@ -1,0 +1,36 @@
+@import '@picocss/pico/scss/_variables.scss';
+
+.card {
+  text-align: center;
+
+  .flex {
+    img {
+      margin-bottom: 2rem;
+    }
+  }
+
+  @media (min-width: map-get($breakpoints, 'sm')) {
+    text-align: unset;
+
+    .flex {
+      text-align: left;
+      display: flex;
+      gap: 2rem;
+
+      img {
+        display: block;
+        width: 150px;
+        margin-bottom: unset;
+        object-fit: contain;
+      }
+
+      div {
+        flex: 1;
+      }
+
+      button {
+        width: auto;
+      }
+    }
+  }
+}
