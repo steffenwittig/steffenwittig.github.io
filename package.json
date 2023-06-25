@@ -1,6 +1,6 @@
 {
   "name": "Steffen Wittig's Portfolio App",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "https://steffenwittig.github.io",
   "private": true,
   "dependencies": {
