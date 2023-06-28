@@ -31,16 +31,6 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.ts?(x)"
-        ],
-        "rules": {
-          "max-len": 120
-        }
-      }
     ]
   },
   "browserslist": {
