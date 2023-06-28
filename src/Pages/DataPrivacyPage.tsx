@@ -6,13 +6,14 @@ export const DataPrivacyPage = () => {
       <p>
         <Link to="/">back</Link>
       </p>
-      <h1>Data Privacy</h1>
+      <h1>Data Privacy (German)</h1>
       <h2>Datenschutzerklärung</h2>
       <p>Im Folgenden möchten wir Sie aufklären, wie Ihre Daten von uns verarbeitet werden.</p>
       <p>
         <strong>Verantwortlich im Sinne der DSGVO ist:</strong>
         <br /> Steffen Wittig
         <br /> Postfach XXXXX
+        <br /> Germany
         <br /> info@steffenwittig.com
       </p>
 
@@ -40,7 +41,8 @@ export const DataPrivacyPage = () => {
       <p>Bitte richten Sie Ihren Widerspruch formlos an die oben genannte Adresse</p>
       <p>
         Darüber hinaus haben Sie das Recht auf Datenübertragbarkeit. Sie haben weiter das Recht, sich bei einer
-        Aufsichtsbehörde über die Verarbeitung zu beschweren. Eine Liste der entsprechenden Behörden finden Sie unter:
+        Aufsichtsbehörde über die Verarbeitung zu beschweren. Eine Liste der entsprechenden Behörden finden Sie
+        unter:&nbsp;
         <a href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html">
           https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html
         </a>
@@ -79,7 +81,7 @@ export const DataPrivacyPage = () => {
         Serverstandort ist USA.
       </p>
       <p>
-        Weitere Informationen zu Widerspruchs- und Beseitigungsmöglichkeiten gegenüber GitHub finden Sie unter:
+        Weitere Informationen zu Widerspruchs- und Beseitigungsmöglichkeiten gegenüber GitHub finden Sie unter:&nbsp;
         <a href="https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-privacy-statement#github-pages">
           https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-privacy-statement#github-pages
         </a>
@@ -96,7 +98,8 @@ export const DataPrivacyPage = () => {
       <p>
         GitHub hat Compliance-Maßnahmen für internationale Datenübermittlungen umgesetzt. Diese gelten für alle
         weltweiten Aktivitäten, bei denen GitHub personenbezogene Daten von natürlichen Personen in der EU verarbeitet.
-        Diese Maßnahmen basieren auf den EU-Standardvertragsklauseln (SCCs). Weitere Informationen finden Sie unter:
+        Diese Maßnahmen basieren auf den EU-Standardvertragsklauseln (SCCs). Weitere Informationen finden Sie
+        unter:&nbsp;
         <a href="https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-data-protection-addendum#attachment-1--the-standard-contractual-clauses-processors">
           https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-data-protection-addendum#attachment-1–the-standard-contractual-clauses-processors
         </a>
