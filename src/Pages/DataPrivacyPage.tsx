@@ -11,10 +11,15 @@ export const DataPrivacyPage = () => {
       <p>Im Folgenden möchten wir Sie aufklären, wie Ihre Daten von uns verarbeitet werden.</p>
       <p>
         <strong>Verantwortlich im Sinne der DSGVO ist:</strong>
-        <br /> Steffen Wittig
-        <br /> Postfach XXXXX
-        <br /> Germany
-        <br /> info@steffenwittig.com
+        Steffen Wittig
+        <br />
+        Im Siek 6
+        <br />
+        37191 Katlenburg-Lindau
+        <br />
+        Germany
+        <br />
+        info@steffenwittig.com
       </p>
 
       <p>
@@ -23,8 +28,10 @@ export const DataPrivacyPage = () => {
       </p>
       <p>
         <strong>Zu den verarbeiteten Daten zählen:</strong>
-        <br /> Ihr Name
-        <br /> Ihre E-Mail-Adresse
+        <br />
+        Ihr Name
+        <br />
+        Ihre E-Mail-Adresse
       </p>
       <p>
         Wir werden die Daten löschen, sobald die Speicherung nicht mehr erforderlich ist oder die Verarbeitung

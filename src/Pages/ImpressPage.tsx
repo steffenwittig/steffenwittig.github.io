@@ -12,7 +12,9 @@ export const ImpressPage = () => {
       <p>
         Steffen Wittig
         <br />
-        Postfach XXXXX
+        Im Siek 6
+        <br />
+        37191 Katlenburg-Lindau
         <br />
         Germany
       </p>
