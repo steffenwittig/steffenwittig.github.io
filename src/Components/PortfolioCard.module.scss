@@ -1,4 +1,4 @@
-@import '@picocss/pico/scss/_variables.scss';
+@import '../index.scss';
 
 .card {
   text-align: center;
@@ -9,27 +9,37 @@
     }
   }
 
-  @media (min-width: map-get($breakpoints, 'sm')) {
-    text-align: unset;
+  text-align: unset;
 
+  .flex {
+    text-align: left;
+    display: flex;
+    gap: 2rem;
+
+    div {
+      flex: 1;
+
+      &.preview {
+        background: $grey-800;
+        background-size: cover;
+        svg {
+          padding: 3rem;
+          width: 100%;
+          margin: 0 auto;
+          filter: drop-shadow(0 0.2rem 0.3rem black);
+        }
+      }
+    }
+  }
+
+  button {
+    width: auto;
+  }
+  @media (max-width: map-get($breakpoints, 'sm')) {
     .flex {
-      text-align: left;
-      display: flex;
-      gap: 2rem;
-
-      img {
-        display: block;
-        width: 150px;
-        margin-bottom: unset;
-        object-fit: contain;
-      }
-
-      div {
-        flex: 1;
-      }
-
-      button {
-        width: auto;
+      display: unset;
+      .preview {
+        margin-bottom: 1rem;
       }
     }
   }

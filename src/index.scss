@@ -1,2 +1,10 @@
+$primary-hue: 330;
+$grey-hue: 200;
+
 @import '@picocss/pico/scss/pico';
-@import 'overrides';
+
+h1,
+h2 {
+  margin-bottom: 1rem;
+  font-weight: lighter;
+}

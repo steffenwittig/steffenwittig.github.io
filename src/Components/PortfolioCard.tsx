@@ -5,7 +5,8 @@ export interface PortfolioCardProps {
   description: JSX.Element | string
   linkTitle: string
   linkUrl: string
-  imageUrl?: string
+  icon: JSX.Element
+  backgroundImage?: string
 }
 
 export const PortfolioCard = ({
@@ -13,21 +14,19 @@ export const PortfolioCard = ({
   description,
   linkTitle,
   linkUrl,
-  imageUrl,
+  icon,
+  backgroundImage,
 }: PortfolioCardProps) => {
   return (
     <article className={styles.card}>
       <h2>{title}</h2>
       <div className={styles.flex}>
-        {imageUrl && <img src={imageUrl} />}
+        <div className={styles.preview} style={{ backgroundImage: `url(${backgroundImage})` }}>
+          {icon}
+        </div>
         <div>
           <p>{description}</p>
-          <a
-            href={linkUrl}
-            title={`Open ${title} in new tab`}
-            target="_blank"
-            role="button"
-          >
+          <a href={linkUrl} title={`Open ${title} in new tab`} target="_blank" role="button" rel="noreferrer">
             {linkTitle}
           </a>
         </div>
