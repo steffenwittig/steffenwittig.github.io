@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { PortfolioCard, PortfolioCardProps } from '../Components/PortfolioCard/PortfolioCard'
+import { PortfolioCard, IPortfolioCardProps } from '../Components/PortfolioCard/PortfolioCard'
 
 import { ReactComponent as InstaThumb } from './../Assets/Icons/Brands/insta.svg'
 import { ReactComponent as YtThumb } from './../Assets/Icons/Brands/yt.svg'
@@ -7,7 +7,7 @@ import { ReactComponent as YtThumb } from './../Assets/Icons/Brands/yt.svg'
 import instaBackground from './../Assets/Thumbnails/insta_thumb_bg.gif'
 import ytBackground from './../Assets/Thumbnails/yt_thumb_bg.gif'
 
-const links: PortfolioCardProps[] = [
+const links: IPortfolioCardProps[] = [
   {
     title: 'NotSteffenWittig on Instagram',
     description: 'This is currently the main channel for my art until this portfolio app is finished.',

@@ -1,6 +1,6 @@
 import styles from './PortfolioCard.module.scss'
 
-export interface PortfolioCardProps {
+export interface IPortfolioCardProps {
   title: string
   description: JSX.Element | string
   linkTitle: string
@@ -16,7 +16,7 @@ export const PortfolioCard = ({
   linkUrl,
   icon,
   backgroundImage,
-}: PortfolioCardProps) => {
+}: IPortfolioCardProps) => {
   return (
     <article className={styles.card}>
       <h2>{title}</h2>
