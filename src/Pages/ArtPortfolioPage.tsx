@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { PortfolioCard, PortfolioCardProps } from '../Components/PortfolioCard'
+import { PortfolioCard, PortfolioCardProps } from '../Components/PortfolioCard/PortfolioCard'
 
 import { ReactComponent as InstaThumb } from './../Assets/Icons/Brands/insta.svg'
 import { ReactComponent as YtThumb } from './../Assets/Icons/Brands/yt.svg'
