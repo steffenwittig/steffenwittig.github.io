@@ -5,5 +5,9 @@ $grey-hue: 200;
   --block-spacing-vertical: var(--spacing);
 }
 
+h1 {
+  --typography-spacing-vertical: var(--spacing);
+}
+
 @import '@picocss/pico/scss/themes/default/_colors.scss';
 @import '@picocss/pico/scss/_variables.scss';

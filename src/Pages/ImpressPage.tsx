@@ -19,7 +19,9 @@ export const ImpressPage = () => {
       <p>
         E-Mail: <a href="mailto:info@steffenwittig.com">info@steffenwittig.com</a>
       </p>
-      <p>Internetseite: https://steffenwittig.com</p>
+      <p>
+        Internetseite: <a href="https://steffenwittig.github.io">https://steffenwittig.github.io</a>
+      </p>
       <h2>Datenschutz</h2>
       <p>
         Datenschutzhinweise finden Sie <Link to="/data-privacy">hier</Link>.
