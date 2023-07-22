@@ -6,11 +6,11 @@ export const HomePage = () => {
       <h1>Steffen Wittig's Portfolio</h1>
       <p>Welcome to my portfolio! What are you interested in?</p>
       <div className="grid">
-        <Link to="art-portfolio" role="button">
+        <Link to="art" role="button">
           Steffen Wittig the artist
         </Link>
-        <Link to="tech-portfolio" role="button" className="secondary">
-          Steffen Wittig the developer
+        <Link to="tech" role="button" className="secondary">
+          Steffen Wittig the software engineer
         </Link>
       </div>
     </>

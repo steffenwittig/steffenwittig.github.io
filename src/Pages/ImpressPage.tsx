@@ -3,9 +3,6 @@ import { Link } from 'react-router-dom'
 export const ImpressPage = () => {
   return (
     <>
-      <p>
-        <Link to="/">back</Link>
-      </p>
       <h1>Impress / Impressum (German)</h1>
       <p>Angaben gemäß § 5 des Telemediengesetzes​</p>
       <h2>Name des Anbieters</h2>

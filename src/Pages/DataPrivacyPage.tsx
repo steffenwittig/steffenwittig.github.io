@@ -3,9 +3,6 @@ import { Link } from 'react-router-dom'
 export const DataPrivacyPage = () => {
   return (
     <>
-      <p>
-        <Link to="/">back</Link>
-      </p>
       <h1>Data Privacy (German)</h1>
       <h2>Datenschutzerklärung</h2>
       <p>Im Folgenden möchten wir Sie aufklären, wie Ihre Daten von uns verarbeitet werden.</p>

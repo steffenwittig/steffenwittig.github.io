@@ -1,11 +1,10 @@
-import { Link } from 'react-router-dom'
-import { PortfolioCard, IPortfolioCardProps } from '../Components/PortfolioCard/PortfolioCard'
+import { PortfolioCard, IPortfolioCardProps } from 'Components/PortfolioCard/PortfolioCard'
 
-import { ReactComponent as InstaThumb } from './../Assets/Icons/Brands/insta.svg'
-import { ReactComponent as YtThumb } from './../Assets/Icons/Brands/yt.svg'
+import { ReactComponent as InstaThumb } from 'Assets/Icons/Brands/insta.svg'
+import { ReactComponent as YtThumb } from 'Assets/Icons/Brands/yt.svg'
 
-import instaBackground from './../Assets/Thumbnails/insta_thumb_bg.gif'
-import ytBackground from './../Assets/Thumbnails/yt_thumb_bg.gif'
+import instaBackground from 'Assets/Thumbnails/insta_thumb_bg.gif'
+import ytBackground from 'Assets/Thumbnails/yt_thumb_bg.gif'
 
 const links: IPortfolioCardProps[] = [
   {
@@ -29,9 +28,6 @@ const links: IPortfolioCardProps[] = [
 export const ArtPortfolioPage = () => {
   return (
     <>
-      <p>
-        <Link to="/">back</Link>
-      </p>
       <h1>Steffen Wittig the Artist</h1>
       <p>
         Welcome to my portfolio! It is currently under construction but you can browse my work on the following

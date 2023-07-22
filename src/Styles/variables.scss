@@ -1,5 +1,9 @@
 $primary-hue: 330;
 $grey-hue: 200;
 
+:root {
+  --block-spacing-vertical: var(--spacing);
+}
+
 @import '@picocss/pico/scss/themes/default/_colors.scss';
 @import '@picocss/pico/scss/_variables.scss';
