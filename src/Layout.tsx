@@ -1,0 +1,23 @@
+import React from 'react'
+import { Breadcrumbs } from 'Components/Breadcrumbs/Breadcrumbs'
+import { CookieNotice } from 'Components/CookieNotice/CookieNotice'
+import { Footer } from 'Components/Footer/Footer'
+import { Header } from 'Components/Header/Header'
+
+interface ILayout {
+  children: React.ReactNode
+}
+
+export const Layout = ({ children }: ILayout) => {
+  return (
+    <>
+      <Header />
+      <div className="container">
+        <Breadcrumbs />
+        {children}
+        <CookieNotice />
+        <Footer />
+      </div>
+    </>
+  )
+}

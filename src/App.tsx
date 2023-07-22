@@ -1,31 +1,22 @@
 import { Outlet, RouterProvider, createHashRouter } from 'react-router-dom'
-import { Breadcrumbs } from './Components/Breadcrumbs/Breadcrumbs'
-import { CookieNotice } from './Components/CookieNotice/CookieNotice'
-import { Footer } from './Components/Footer/Footer'
 import { ArtPortfolioPage } from './Pages/art/ArtPortfolioPage'
 import { CookieDimension } from './Pages/CookieDimension'
 import { DataPrivacyPage } from './Pages/DataPrivacyPage'
 import { HomePage } from './Pages/HomePage'
 import { ImpressPage } from './Pages/ImpressPage'
-import { Header } from './Components/Header/Header'
+import { Layout } from 'Layout'
 
 const router = createHashRouter([
   {
     path: '/',
     element: (
-      <>
-        <Header />
-        <div className="container">
-          <Breadcrumbs />
-          <Outlet />
-          <CookieNotice />
-          <Footer />
-        </div>
-      </>
+      <Layout>
+        <Outlet />
+      </Layout>
     ),
     children: [
       {
-        path: '/',
+        path: '',
         element: <HomePage />,
       },
       {
@@ -50,7 +41,11 @@ const router = createHashRouter([
       },
     ],
     handle: { title: 'Home' },
-    errorElement: <p>Page not found</p>,
+    errorElement: (
+      <Layout>
+        <p>Page not found</p>
+      </Layout>
+    ),
   },
 ])
 

@@ -1,7 +1,21 @@
 import { Link } from 'react-router-dom'
 import styles from './Header.module.scss'
 
-const headerLinks = [{}]
+interface IHeaderLink {
+  to: string
+  title: string
+}
+
+const headerLinks: IHeaderLink[] = [
+  {
+    to: '/art',
+    title: 'Art',
+  },
+  {
+    to: '/tech',
+    title: 'Tech',
+  },
+]
 
 export const Header = () => {
   return (
@@ -11,12 +25,13 @@ export const Header = () => {
           <li>Steffen Wittig's Portfolio</li>
         </ul>
         <ul>
-          <li>
-            <Link to="/art">Art</Link>
-          </li>
-          <li>
-            <Link to="/tech">Tech</Link>
-          </li>
+          {headerLinks.map((l) => (
+            <li>
+              <Link to={l.to} title={`Go to ${l.title} page`}>
+                {l.title}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </div>
