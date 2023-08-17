@@ -22,9 +22,12 @@
       &.preview {
         background: $grey-800;
         background-size: cover;
-        svg {
+
+        svg,
+        .spacer {
           padding: 3rem;
           width: 100%;
+          aspect-ratio: 1;
           margin: 0 auto;
           filter: drop-shadow(0 0.2rem 0.3rem black);
         }

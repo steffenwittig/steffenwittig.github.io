@@ -3,8 +3,8 @@ import { PortfolioCard, IPortfolioCardProps } from 'Components/PortfolioCard/Por
 import { ReactComponent as InstaThumb } from 'Assets/Icons/Brands/insta.svg'
 import { ReactComponent as YtThumb } from 'Assets/Icons/Brands/yt.svg'
 
-import instaBackground from 'Assets/Thumbnails/insta_thumb_bg.gif'
-import ytBackground from 'Assets/Thumbnails/yt_thumb_bg.gif'
+import instaBackground from 'Assets/Portfolio/Thumbnails/Art/insta_thumb_bg.gif'
+import ytBackground from 'Assets/Portfolio/Thumbnails/Art/yt_thumb_bg.gif'
 
 const links: IPortfolioCardProps[] = [
   {

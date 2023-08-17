@@ -5,6 +5,7 @@ import { DataPrivacyPage } from './Pages/DataPrivacyPage'
 import { HomePage } from './Pages/HomePage'
 import { ImpressPage } from './Pages/ImpressPage'
 import { Layout } from 'Layout'
+import { TechPortfolioPage } from 'Pages/tech/TechPortfolioPage'
 
 const router = createHashRouter([
   {
@@ -23,6 +24,11 @@ const router = createHashRouter([
         path: '/art',
         element: <ArtPortfolioPage />,
         handle: { title: 'NotSteffenWittig Art' },
+      },
+      {
+        path: '/tech',
+        element: <TechPortfolioPage />,
+        handle: { title: 'Steffen Wittig Software' },
       },
       {
         path: '/impress',
