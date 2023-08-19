@@ -26,7 +26,7 @@ export const Header = () => {
         </ul>
         <ul>
           {headerLinks.map((l) => (
-            <li>
+            <li key={l.title}>
               <Link to={l.to} title={`Go to ${l.title} page`}>
                 {l.title}
               </Link>

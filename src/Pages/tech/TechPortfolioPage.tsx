@@ -23,7 +23,7 @@ export const TechPortfolioPage = () => {
       <h1>Steffen Wittig the Software Engineer</h1>
       <p>Let me introduce you to some public software projects that I've worked on over the years.</p>
       {links.map((link) => (
-        <PortfolioCard {...link} />
+        <PortfolioCard {...link} key={link.title} />
       ))}
     </>
   )

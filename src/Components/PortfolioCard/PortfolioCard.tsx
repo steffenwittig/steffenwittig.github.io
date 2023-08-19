@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import styles from './PortfolioCard.module.scss'
-import { Icon } from 'Components/Icon'
+import { Icon } from 'Components/Icon/Icon'
 
 export interface IPortfolioCardProps {
   title: string
@@ -23,7 +23,7 @@ export const PortfolioCard = ({
 }: IPortfolioCardProps) => {
   function renderIcon() {
     if (icon) {
-      return <Icon>{icon}</Icon>
+      return <Icon icon={icon} color="primary-inverse" />
     } else {
       return <div className={styles.spacer}></div>
     }

@@ -32,7 +32,7 @@ export const ArtPortfolioPage = () => {
         platforms:
       </p>
       {links.map((link) => (
-        <PortfolioCard {...link} />
+        <PortfolioCard {...link} key={link.title} />
       ))}
     </>
   )
