@@ -1,8 +1,6 @@
 import { PortfolioCard, IPortfolioCardProps } from 'Components/PortfolioCard/PortfolioCard'
 
-import { ReactComponent as InstaThumb } from 'Assets/Icons/Brands/insta.svg'
-import { ReactComponent as YtThumb } from 'Assets/Icons/Brands/yt.svg'
-
+import { Instagram, Youtube } from '@styled-icons/boxicons-logos'
 import instaBackground from 'Assets/Portfolio/Thumbnails/Art/insta_thumb_bg.gif'
 import ytBackground from 'Assets/Portfolio/Thumbnails/Art/yt_thumb_bg.gif'
 
@@ -12,7 +10,7 @@ const links: IPortfolioCardProps[] = [
     description: 'This is currently the main channel for my art until this portfolio app is finished.',
     linkTitle: 'Take me to Instagram',
     linkUrl: 'https://instagram.com/NotSteffenWittig',
-    icon: <InstaThumb />,
+    icon: <Instagram />,
     backgroundImage: instaBackground,
   },
   {
@@ -20,7 +18,7 @@ const links: IPortfolioCardProps[] = [
     description: 'Short animations and art showcases.',
     linkTitle: 'Watch videos on YouTube',
     linkUrl: 'https://www.youtube.com/@NotSteffenWittig',
-    icon: <YtThumb />,
+    icon: <Youtube />,
     backgroundImage: ytBackground,
   },
 ]
