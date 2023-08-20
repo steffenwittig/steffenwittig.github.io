@@ -1,4 +1,4 @@
-import { CaretDown } from '@styled-icons/boxicons-regular'
+import { ChevronDown } from '@styled-icons/boxicons-regular'
 import { Icon } from 'Components/Icon/Icon'
 import { ElementType, useCallback, useEffect, useRef, useState } from 'react'
 import styles from './FAQItem.module.scss'
@@ -34,7 +34,7 @@ export const FAQItem = ({ question, answer, headingTag: QuestionTag = 'div' }: I
         <QuestionTag itemProp="name" className={styles.faqHeaderText}>
           {question}
         </QuestionTag>
-        <Icon className={styles.icon} icon={<CaretDown />} ref={indicator} />
+        <Icon className={styles.icon} icon={<ChevronDown />} ref={indicator} />
       </div>
       <div className={styles.faqBody} ref={body}>
         <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer" ref={content}>

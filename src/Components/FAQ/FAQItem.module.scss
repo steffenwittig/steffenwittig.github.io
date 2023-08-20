@@ -1,3 +1,5 @@
+@import '/src/Styles/variables.scss';
+
 .faqHeader {
   background-color: var(--card-background-color);
   box-shadow: var(--card-box-shadow);
@@ -9,9 +11,11 @@
   align-items: center;
   cursor: pointer;
 
-  .icon > svg {
-    height: 1rem;
-    transition: rotate 0.2s;
+  .icon {
+    transition: rotate $transitionDuration ease-in-out;
+    > svg {
+      height: 1rem;
+    }
   }
 
   &Text {
@@ -32,7 +36,7 @@
 .faqBody {
   margin-bottom: 0.2rem;
   overflow: hidden;
-  transition: height 0.2s;
+  transition: height $transitionDuration;
   > div {
     padding: 1rem;
   }
