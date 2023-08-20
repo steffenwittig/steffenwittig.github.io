@@ -1,11 +1,11 @@
-import { Outlet, RouterProvider, createHashRouter } from 'react-router-dom'
-import { ArtPortfolioPage } from './Pages/art/ArtPortfolioPage'
-import { CookieDimension } from './Pages/CookieDimension'
-import { DataPrivacyPage } from './Pages/DataPrivacyPage'
-import { HomePage } from './Pages/HomePage'
-import { ImpressPage } from './Pages/ImpressPage'
 import { Layout } from 'Layout'
-import { TechPortfolioPage } from 'Pages/tech/TechPortfolioPage'
+import { TechPortfolioPage } from 'Pages/TechPortfolio/TechPortfolioPage'
+import { Outlet, RouterProvider, createHashRouter } from 'react-router-dom'
+import { ArtPortfolioPage } from './Pages/ArtPortfolio/ArtPortfolioPage'
+import { HomePage } from './Pages/Home/HomePage'
+import { DataPrivacyPage } from './Pages/Legal/DataPrivacyPage'
+import { ImpressPage } from './Pages/Legal/ImpressPage'
+import { CookieDimension } from './Pages/Misc/CookieDimension'
 
 const router = createHashRouter([
   {

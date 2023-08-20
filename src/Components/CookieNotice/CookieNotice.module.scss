@@ -6,9 +6,11 @@
   bottom: 0;
   left: 0;
   width: 100vw;
-  padding: 1rem;
   background-color: $black;
-  p {
-    color: $white;
+  :global .container {
+    padding: 1rem;
+    p {
+      color: $white;
+    }
   }
 }

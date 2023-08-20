@@ -8,9 +8,6 @@ export const CookieDimension = () => {
   }
   return (
     <div>
-      <p>
-        <Link to="/">back</Link>
-      </p>
       <p>You have found the secret cookie dimension.</p>
       <div className="grid">{renderCookies()}</div>
     </div>

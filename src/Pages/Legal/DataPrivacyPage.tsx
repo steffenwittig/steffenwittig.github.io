@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom'
-
 export const DataPrivacyPage = () => {
   return (
     <>
@@ -8,6 +6,7 @@ export const DataPrivacyPage = () => {
       <p>Im Folgenden möchten wir Sie aufklären, wie Ihre Daten von uns verarbeitet werden.</p>
       <p>
         <strong>Verantwortlich im Sinne der DSGVO ist:</strong>
+        <br />
         Steffen Wittig
         <br />
         Im Siek 6
