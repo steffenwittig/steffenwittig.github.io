@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import styles from './CookieDimension.module.scss'
 
 export const CookieDimension = () => {
   function renderCookies() {
@@ -9,7 +9,7 @@ export const CookieDimension = () => {
   return (
     <div>
       <p>You have found the secret cookie dimension.</p>
-      <div className="grid">{renderCookies()}</div>
+      <div className={styles.cookies}>{renderCookies()}</div>
     </div>
   )
 }
