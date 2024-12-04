@@ -4,7 +4,7 @@ import { CookieNotice } from 'Components/CookieNotice/CookieNotice'
 import { Footer } from 'Components/Footer/Footer'
 import { Header } from 'Components/Header/Header'
 
-interface ILayout {
+type ILayout = {
   children: React.ReactNode
 }
 

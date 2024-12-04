@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import styles from './Icon.module.scss'
 
-interface IIconProps {
+type IIconProps = {
   icon: React.ReactNode
   className?: string
   color?: 'primary' | 'primary-inverse' | 'secondary' | 'contrast' | 'default'

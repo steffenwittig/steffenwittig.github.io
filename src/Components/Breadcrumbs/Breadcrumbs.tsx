@@ -1,7 +1,7 @@
 import { Link, useMatches } from 'react-router-dom'
 import styles from './Breadcrumbs.module.scss'
 
-interface ICrumb {
+type ICrumb = {
   pathname: string
   title: string
 }

@@ -3,7 +3,7 @@ import { Icon } from 'Components/Icon/Icon'
 import { ElementType, useCallback, useEffect, useRef, useState } from 'react'
 import styles from './FAQItem.module.scss'
 
-export interface IFAQItemProps {
+export type IFAQItemProps = {
   question: string
   answer: JSX.Element
   headingTag?: ElementType

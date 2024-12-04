@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import styles from './Header.module.scss'
 
-interface IHeaderLink {
+type IHeaderLink = {
   to: string
   title: string
 }

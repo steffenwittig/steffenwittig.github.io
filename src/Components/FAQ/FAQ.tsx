@@ -1,7 +1,7 @@
 import { ElementType } from 'react'
 import { FAQItem, IFAQItemProps } from './FAQItem'
 
-interface IFAQProps {
+type IFAQProps = {
   items: IFAQItemProps[]
   headingTag?: ElementType
 }

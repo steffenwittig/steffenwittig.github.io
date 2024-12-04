@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import styles from './PortfolioCard.module.scss'
 import { Icon } from 'Components/Icon/Icon'
 
-export interface IPortfolioCardProps {
+export type IPortfolioCardProps = {
   title: string
   description: JSX.Element | string
   linkTitle: string
