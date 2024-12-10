@@ -1,10 +1,10 @@
-import { PortfolioCard, IPortfolioCardProps } from 'Components/PortfolioCard/PortfolioCard'
+import { PortfolioCard, PortfolioCardProps } from 'Components/PortfolioCard/PortfolioCard'
 
 import { Instagram, Youtube } from '@styled-icons/boxicons-logos'
 import instaBackground from 'Assets/Portfolio/Thumbnails/Art/insta_thumb_bg.gif'
 import ytBackground from 'Assets/Portfolio/Thumbnails/Art/yt_thumb_bg.gif'
 
-const links: IPortfolioCardProps[] = [
+const links: PortfolioCardProps[] = [
   {
     title: 'NotSteffenWittig on Instagram',
     description: 'This is currently the main channel for my art until this portfolio app is finished.',

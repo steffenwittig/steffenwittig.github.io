@@ -2,7 +2,7 @@ import { FAQ } from 'Components/FAQ/FAQ'
 import { ImageButton } from 'Components/ImageButton/ImageButton'
 
 import instaBackground from 'Assets/Portfolio/Thumbnails/Art/insta_thumb_bg.gif'
-import emofaniBackground from 'Assets/Portfolio/Thumbnails/Tech/emofani_thumb.jpg'
+import emofaniBackground from 'Assets/Portfolio/Thumbnails/Tech/emofani_preview.jpg'
 
 export const HomePage = () => {
   return (
