@@ -1,5 +1,35 @@
-.header {
-  // background-color: var(--card-background-color);
-  // box-shadow: var(--card-box-shadow);
-  // margin-bottom: var(--spacing);
+@import 'Styles/mixins.scss';
+
+.outer {
+  background-color: var(--bg-light);
+  padding: calc(var(--spacer) * 0.5) var(--spacer);
+}
+
+.nav {
+  @include container-full;
+
+  @media (min-width: $breakpoint-md) {
+    @include flex;
+  }
+
+  ul {
+    @include flex;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    list-style-type: none;
+    a {
+      text-decoration: none;
+    }
+  }
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.navBrand {
+  flex: 1;
 }

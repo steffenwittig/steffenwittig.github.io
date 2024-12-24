@@ -1,12 +1,23 @@
 @import './variables.scss';
 
 @mixin container-full {
-  padding: var(--spacer);
-  margin: var(--spacer);
-  overflow: hidden;
-
   @media (min-width: $breakpoint-sm) {
     width: calc($breakpoint-sm - $spacer * 2);
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
+
+  @media (min-width: $breakpoint-md) {
+    width: calc($breakpoint-md - $spacer * 2);
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    width: calc($breakpoint-lg - $spacer * 2);
+  }
+}
+
+@mixin flex {
+  display: flex;
+  gap: var(--spacer);
+  align-items: center;
 }

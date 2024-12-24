@@ -1,6 +1,6 @@
 @use 'sass:map';
 
-// colors
+// Steffen Wittig's CI colors
 $white: #fff;
 $black: #000;
 $cyan: #00d1ff;
@@ -8,8 +8,9 @@ $magenta: #fa0862;
 $dark-grey: #433d51;
 $light-grey: #b4a9bb;
 
-// sizes
+// sizes for layout
 $fontsize-base: 14px;
 $spacer: 2rem;
 $breakpoint-sm: 480px;
 $breakpoint-md: 768px;
+$breakpoint-lg: 1280px;

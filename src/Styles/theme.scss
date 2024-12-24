@@ -11,9 +11,9 @@ colors
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #{$dark-grey};
+    --background-color: #{$black};
     --text-color: #{$white};
-    --bg-light: #{$light-grey};
+    --bg-light: #{$dark-grey};
     --color-primary: #{$cyan};
     --color-secondary: #{$magenta};
     --color-primary-highlight: color-mix(in hsl, var(--color-primary), var(--color-secondary) 5%);
@@ -62,4 +62,9 @@ a {
   &:hover {
     color: var(--color-primary-highlight);
   }
+}
+
+h1 {
+  // default headline top margins must die
+  margin-top: 0;
 }
