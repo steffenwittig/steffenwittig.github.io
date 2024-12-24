@@ -12,7 +12,7 @@ export const Layout = ({ children }: ILayout) => {
   return (
     <>
       <Header />
-      <div className="container">
+      <div>
         <Breadcrumbs />
         {children}
         <CookieNotice />

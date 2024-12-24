@@ -1,0 +1,43 @@
+@import url('/src/Styles/variables.css');
+
+.faqHeader {
+  /* background-color: var(--card-background-color);
+  box-shadow: var(--card-box-shadow);
+
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+
+  .icon {
+    transition: rotate $transitionDuration ease-in-out;
+    > svg {
+      height: 1rem;
+    }
+  }
+
+  &Text {
+    font-style: normal;
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-size-normal);
+    margin: 0;
+  }
+
+  &:hover {
+    background-color: var(--primary);
+    .faqHeaderText {
+      color: var(--primary-inverse);
+    }
+  } */
+}
+
+.faqBody {
+  /* margin-bottom: 0.2rem;
+  overflow: hidden;
+  transition: height --transition-duration;
+  > div {
+    padding: 1rem;
+  } */
+}

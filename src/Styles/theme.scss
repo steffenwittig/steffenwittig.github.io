@@ -1,0 +1,65 @@
+@use 'sass:color';
+
+@import './variables.scss';
+@import '@fontsource/quicksand/300.css';
+
+/*
+
+colors
+
+*/
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #{$dark-grey};
+    --text-color: #{$white};
+    --bg-light: #{$light-grey};
+    --color-primary: #{$cyan};
+    --color-secondary: #{$magenta};
+    --color-primary-highlight: color-mix(in hsl, var(--color-primary), var(--color-secondary) 5%);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: #{$light-grey};
+    --text-color: #{$black};
+    --bg-light: #{$white};
+    --color-primary: #{$magenta};
+    --color-secondary: #{$cyan};
+    --color-primary-highlight: color-mix(in hsl, var(--color-primary), var(--text-color) 10%);
+  }
+}
+
+/*
+
+layout
+
+*/
+:root {
+  --spacer: 2rem;
+}
+
+/*
+
+basic styles
+
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: 'Quicksand';
+  color: var(--text-color);
+  margin: 0;
+}
+
+a {
+  color: var(--color-primary);
+  &:hover {
+    color: var(--color-primary-highlight);
+  }
+}

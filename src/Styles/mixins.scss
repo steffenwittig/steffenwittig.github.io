@@ -1,0 +1,12 @@
+@import './variables.scss';
+
+@mixin container-full {
+  padding: var(--spacer);
+  margin: var(--spacer);
+  overflow: hidden;
+
+  @media (min-width: $breakpoint-sm) {
+    width: calc($breakpoint-sm - $spacer * 2);
+    margin: 0 auto;
+  }
+}

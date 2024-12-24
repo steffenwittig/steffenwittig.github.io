@@ -1,49 +1,49 @@
 @import '../../Styles/variables.scss';
 
 .card {
-  text-align: center;
+  // text-align: center;
 
-  .flex {
-    img {
-      margin-bottom: 2rem;
-    }
-  }
+  // .flex {
+  //   img {
+  //     margin-bottom: 2rem;
+  //   }
+  // }
 
-  text-align: unset;
+  // text-align: unset;
 
-  .flex {
-    text-align: left;
-    display: flex;
-    gap: 2rem;
+  // .flex {
+  //   text-align: left;
+  //   display: flex;
+  //   gap: 2rem;
 
-    div {
-      flex: 1;
+  //   div {
+  //     flex: 1;
 
-      &.preview {
-        background: $grey-800;
-        background-size: cover;
+  //     &.preview {
+  //       background: $grey-800;
+  //       background-size: cover;
 
-        svg,
-        .spacer {
-          padding: 3rem;
-          width: 100%;
-          aspect-ratio: 1;
-          margin: 0 auto;
-          filter: drop-shadow(0 0.2rem 0.3rem black);
-        }
-      }
-    }
-  }
+  //       svg,
+  //       .spacer {
+  //         padding: 3rem;
+  //         width: 100%;
+  //         aspect-ratio: 1;
+  //         margin: 0 auto;
+  //         filter: drop-shadow(0 0.2rem 0.3rem black);
+  //       }
+  //     }
+  //   }
+  // }
 
-  button {
-    width: auto;
-  }
-  @media (max-width: map-get($breakpoints, 'sm')) {
-    .flex {
-      display: unset;
-      .preview {
-        margin-bottom: 1rem;
-      }
-    }
-  }
+  // button {
+  //   width: auto;
+  // }
+  // @media (max-width: map-get($breakpoints, 'sm')) {
+  //   .flex {
+  //     display: unset;
+  //     .preview {
+  //       margin-bottom: 1rem;
+  //     }
+  //   }
+  // }
 }

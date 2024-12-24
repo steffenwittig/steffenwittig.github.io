@@ -4,7 +4,7 @@
   "homepage": "https://steffenwittig.github.io",
   "private": true,
   "dependencies": {
-    "@picocss/pico": "^1.5.10",
+    "@fontsource/quicksand": "^5.1.0",
     "@styled-icons/boxicons-logos": "^10.47.0",
     "@styled-icons/boxicons-regular": "^10.47.0",
     "@styled-icons/styled-icon": "^10.7.0",

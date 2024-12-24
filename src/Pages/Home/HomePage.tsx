@@ -3,10 +3,11 @@ import { ImageButton } from 'Components/ImageButton/ImageButton'
 
 import instaBackground from 'Assets/Portfolio/Thumbnails/Art/insta_thumb_bg.gif'
 import emofaniBackground from 'Assets/Portfolio/Thumbnails/Tech/emofani_preview.jpg'
+import pageStyles from '../Page.module.scss'
 
 export const HomePage = () => {
   return (
-    <>
+    <div className={pageStyles.pageContent}>
       <h1>Welcome to our portfolios!</h1>
       <p>Which Steffen Wittig are you interested in?</p>
       <div className="grid">
@@ -77,6 +78,6 @@ export const HomePage = () => {
           },
         ]}
       />
-    </>
+    </div>
   )
 }

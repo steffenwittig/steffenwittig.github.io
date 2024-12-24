@@ -1,25 +1,25 @@
 @import '/src/Styles/variables.scss';
 
 .imageButton {
-  padding: 0;
-  border: 0;
-  transition: scale $transitionDuration;
-  &:hover {
-    scale: 1.05;
-  }
+  // padding: 0;
+  // border: 0;
+  // transition: scale $transitionDuration;
+  // &:hover {
+  //   scale: 1.05;
+  // }
 }
 
 .image {
-  aspect-ratio: 1;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
+  // aspect-ratio: 1;
+  // background-size: cover;
+  // background-position: center;
+  // width: 100%;
 }
 
 .title {
-  font-size: xx-large;
+  // font-size: xx-large;
 }
 
 .subtitle {
-  font-size: small;
+  // font-size: small;
 }
