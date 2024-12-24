@@ -4,19 +4,25 @@
   @include container-full;
 
   ol {
-    @include flex;
+    display: flex;
     padding: 0;
     margin: 0;
     list-style: none;
+    font-size: small;
+    margin: calc(var(--spacer) * 0.5) 0;
+  }
+
+  a {
+    text-decoration: none;
   }
 
   li {
     &:not(:last-child) {
-      padding-right: calc(var(--spacing) * 0.5);
+      padding-right: calc(var(--spacer) * 0.5);
     }
     &:not(:first-child) {
-      border-left: 1px solid var(--color);
-      padding-left: calc(var(--spacing) * 0.5);
+      border-left: 1px solid var(--text-color);
+      padding-left: calc(var(--spacer) * 0.5);
     }
   }
 }
