@@ -5,7 +5,6 @@ import instaBackground from 'Assets/Portfolio/Thumbnails/Art/insta_thumb_bg.gif'
 import emofaniBackground from 'Assets/Portfolio/Thumbnails/Tech/emofani_preview.jpg'
 import { Page } from 'Components/Page'
 import styles from './Homepage.module.scss'
-import { Button } from 'Components/Button/Button'
 
 export const HomePage = () => {
   return (
