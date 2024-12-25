@@ -1,9 +1,9 @@
 @import 'Styles/mixins.scss';
 
 .footer {
-  background-color: var(--bg-light);
-  padding: calc(var(--spacer) * 0.5) var(--spacer);
+  background-color: var(--col-bg-light);
+  padding: calc(var(--space) * 0.5) var(--space);
   font-size: small;
   @include flex;
-  margin-top: var(--spacer);
+  margin-top: var(--space);
 }

@@ -4,63 +4,58 @@
 @import '@fontsource/quicksand/300.css';
 
 /*
-
-colors
-
+color vars
 */
-
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #{$black};
-    --text-color: #{$white};
-    --bg-light: #{$dark-grey};
-    --color-primary: #{$cyan};
-    --color-secondary: #{$magenta};
-    --color-primary-highlight: #{$cyan-dark};
+    --col-bg: #{$black};
+    --col-text: #{$white};
+    --col-bg-light: #{$dark-grey};
+    --col-primary: #{$cyan};
+    --col-text-on-primary: #{$black};
+    --col-primary-highlight: #{$cyan-dark};
+    --col-text-on-primary-highlight: #{$white};
   }
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --background-color: #{$light-grey};
-    --text-color: #{$black};
-    --bg-light: #{$white};
-    --color-primary: #{$cyan-dark};
-    --color-secondary: #{$magenta};
-    --color-primary-highlight: color-mix(in hsl, var(--color-primary), var(--text-color) 5%);
+    --col-bg: #{$light-grey};
+    --col-text: #{$black};
+    --col-bg-light: #{$white};
+    --col-primary: #{$cyan-dark};
+    --col-text-on-primary: #{$white};
+    --col-primary-highlight: #{$cyan};
+    --col-text-on-primary-highlight: #{$black};
   }
 }
 
 /*
-
-layout
-
+ui vars
 */
 :root {
-  --spacer: 2rem;
+  --space: 2rem;
+  --anim-speed-base: 0.1s;
 }
 
 /*
-
 basic styles
-
 */
-
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: var(--background-color);
+  background-color: var(--col-bg);
   font-family: 'Quicksand';
-  color: var(--text-color);
+  color: var(--col-text);
   margin: 0;
 }
 
 a {
-  color: var(--color-primary);
+  color: var(--col-primary);
   &:hover {
-    color: var(--color-primary-highlight);
+    color: var(--col-primary-highlight);
   }
 }
 

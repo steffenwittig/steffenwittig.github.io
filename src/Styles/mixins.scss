@@ -20,11 +20,11 @@
 
 @mixin flex {
   display: flex;
-  gap: var(--spacer);
+  gap: var(--space);
   align-items: center;
 }
 
 @mixin flex-sm {
   @include flex;
-  gap: calc(var(--spacer) * 0.5);
+  gap: calc(var(--space) * 0.5);
 }

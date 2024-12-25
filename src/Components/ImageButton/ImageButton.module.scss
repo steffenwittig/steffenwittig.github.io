@@ -1,25 +1,33 @@
 @import '/src/Styles/variables.scss';
 
 .imageButton {
-  // padding: 0;
-  // border: 0;
-  // transition: scale $transitionDuration;
-  // &:hover {
-  //   scale: 1.05;
-  // }
+  transition: scale var(--anim-speed-base);
+  flex: 1;
+  background-color: var(--col-primary);
+
+  color: var(--col-text-on-primary);
+  text-decoration: none;
+
+  &:hover {
+    scale: 1.05;
+    color: var(--col-text);
+    background-color: var(--col-primary-highlight);
+  }
 }
 
 .image {
-  // aspect-ratio: 1;
-  // background-size: cover;
-  // background-position: center;
-  // width: 100%;
+  aspect-ratio: 1;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
 }
 
 .title {
-  // font-size: xx-large;
+  text-align: center;
+  padding: var(--space);
+  font-size: xx-large;
 }
 
 .subtitle {
-  // font-size: small;
+  font-size: small;
 }
