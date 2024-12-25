@@ -1,16 +1,17 @@
 @import '../../Styles/variables.scss';
+@import '../../Styles/mixins.scss';
 
-.cookieNotice {
-  // position: fixed;
-  // z-index: 1000;
-  // bottom: 0;
-  // left: 0;
-  // width: 100vw;
-  // background-color: $black;
-  // :global .container {
-  //   padding: 1rem;
-  //   p {
-  //     color: $white;
-  //   }
-  // }
+.outer {
+  @include container-full;
+}
+
+.notice {
+  background: var(--bg-light);
+  padding: var(--spacer);
+  margin: var(--spacer);
+  font-size: small;
+}
+
+.buttons {
+  @include flex-sm;
 }

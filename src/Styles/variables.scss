@@ -1,9 +1,11 @@
 @use 'sass:map';
+@use 'sass:color';
 
 // Steffen Wittig's CI colors
 $white: #fff;
 $black: #000;
 $cyan: #00d1ff;
+$cyan-dark: #1088a3;
 $magenta: #fa0862;
 $dark-grey: #433d51;
 $light-grey: #b4a9bb;

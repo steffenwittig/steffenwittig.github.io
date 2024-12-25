@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom'
 import styles from './Header.module.scss'
 
-type IHeaderLink = {
+type HeaderLink = {
   to: string
   title: string
 }
 
-const headerLinks: IHeaderLink[] = [
+const headerLinks: HeaderLink[] = [
   {
     to: '/art',
     title: 'Art',

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import useLocalStorageState from 'use-local-storage-state'
 import styles from './CookieNotice.module.scss'
+import { Button } from 'Components/Button/Button'
 
 enum CookieNoticeState {
   HIDDEN,
@@ -10,71 +11,65 @@ enum CookieNoticeState {
   WANTCOOKIE,
 }
 
-export const CookieNotice = () => {
+const Elements = () => {
   const [state, setState] = useState<CookieNoticeState>()
   const [storedState, setStoredState] = useLocalStorageState<CookieNoticeState>('cookieState', {
     defaultValue: CookieNoticeState.INITIAL,
   })
 
   function hideAndSave(): void {
-    // we only want to save if the banner was hidden, not the "special" states
-    // (might be confusing when revisiting)
+    // we only want to save if the banner was hidden, not the "inbetween" states
+    // (they might be confusing when revisiting)
     setState(CookieNoticeState.HIDDEN)
     setStoredState(CookieNoticeState.HIDDEN)
   }
 
   useEffect(() => {
     const storedState = localStorage.getItem('cookieState')
-    if (storedState !== undefined) {
+    if (storedState) {
       setState(Number(storedState))
     }
   }, [storedState])
 
-  function renderContent() {
-    switch (state) {
-      case CookieNoticeState.INITIAL:
-        return (
-          <>
-            <p>No Cookies here. Happy browsing!</p>
-            <div className="grid">
-              <button onClick={hideAndSave}>Nice!</button>
-              <button onClick={() => setState(CookieNoticeState.WHY)} className="secondary">
-                Why not?
-              </button>
-            </div>
-          </>
-        )
-      case CookieNoticeState.WHY:
-        return (
-          <>
-            <p>
-              I am just a simple webapp without a backend and all that jazz. So I don't need cookies to function. 😊
-            </p>
-            <div className="grid">
-              <button onClick={() => hideAndSave}>Oh alright. Thanks!</button>
-              <button onClick={() => setState(CookieNoticeState.WANTCOOKIE)} className="secondary">
-                But I want a cookie!
-              </button>
-            </div>
-          </>
-        )
-      case CookieNoticeState.WANTCOOKIE:
-        return (
-          <>
-            <p>Please pick up your Cookie then.</p>
-            <div className="grid">
-              <Link to="/cookie-dimension" role="button" title="You asked for a cookie..." onClick={hideAndSave}>
-                🍪
-              </Link>
-            </div>
-          </>
-        )
-    }
+  switch (state) {
+    case CookieNoticeState.INITIAL:
+      return (
+        <div className={styles.notice}>
+          <p>No Cookies here. Happy browsing!</p>
+          <div className={styles.buttons}>
+            <Button onClick={hideAndSave} title="Nice!" />
+            <Button onClick={() => setState(CookieNoticeState.WHY)} border={true} title="Why not?" />
+          </div>
+        </div>
+      )
+    case CookieNoticeState.WHY:
+      return (
+        <div className={styles.notice}>
+          <p>I am just a simple webapp without a backend and all that jazz. So I don't need cookies to function. 😊</p>
+          <div className={styles.buttons}>
+            <Button onClick={() => hideAndSave} title="Oh alright. Thanks!" />
+            <Button onClick={() => setState(CookieNoticeState.WANTCOOKIE)} border={true} title="But I want a cookie!" />
+          </div>
+        </div>
+      )
+    case CookieNoticeState.WANTCOOKIE:
+      return (
+        <div className={styles.notice}>
+          <p>Please pick up your Cookie then.</p>
+          <div className={styles.buttons}>
+            <Button to="/cookie-dimension" title="🍪" onClick={hideAndSave} border={true}></Button>
+          </div>
+        </div>
+      )
   }
 
+  return <></>
+}
+
+export const CookieNotice = () => {
   return (
-    <div className={styles.cookieNotice}>
-      {state != CookieNoticeState.HIDDEN && <div className="container">{renderContent()}</div>}
+    <div className={styles.outer}>
+      <Elements />
     </div>
   )
 }

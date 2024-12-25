@@ -4,11 +4,7 @@ import { CookieNotice } from 'Components/CookieNotice/CookieNotice'
 import { Footer } from 'Components/Footer/Footer'
 import { Header } from 'Components/Header/Header'
 
-type ILayout = {
-  children: React.ReactNode
-}
-
-export const Layout = ({ children }: ILayout) => {
+export const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Header />

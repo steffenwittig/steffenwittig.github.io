@@ -23,3 +23,8 @@
   gap: var(--spacer);
   align-items: center;
 }
+
+@mixin flex-sm {
+  @include flex;
+  gap: calc(var(--spacer) * 0.5);
+}

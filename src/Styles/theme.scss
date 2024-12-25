@@ -16,7 +16,7 @@ colors
     --bg-light: #{$dark-grey};
     --color-primary: #{$cyan};
     --color-secondary: #{$magenta};
-    --color-primary-highlight: color-mix(in hsl, var(--color-primary), var(--color-secondary) 5%);
+    --color-primary-highlight: #{$cyan-dark};
   }
 }
 
@@ -25,9 +25,9 @@ colors
     --background-color: #{$light-grey};
     --text-color: #{$black};
     --bg-light: #{$white};
-    --color-primary: #{$magenta};
-    --color-secondary: #{$cyan};
-    --color-primary-highlight: color-mix(in hsl, var(--color-primary), var(--text-color) 10%);
+    --color-primary: #{$cyan-dark};
+    --color-secondary: #{$magenta};
+    --color-primary-highlight: color-mix(in hsl, var(--color-primary), var(--text-color) 5%);
   }
 }
 
@@ -64,7 +64,8 @@ a {
   }
 }
 
+p,
 h1 {
-  // default headline top margins must die
+  // default top margins must die
   margin-top: 0;
 }
