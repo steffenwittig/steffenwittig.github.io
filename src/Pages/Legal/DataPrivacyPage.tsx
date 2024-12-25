@@ -1,6 +1,8 @@
+import { Page } from 'Components/Page'
+
 export const DataPrivacyPage = () => {
   return (
-    <>
+    <Page>
       <h1>Data Privacy (German)</h1>
       <h2>Datenschutzerklärung</h2>
       <p>Im Folgenden möchten wir Sie aufklären, wie Ihre Daten von uns verarbeitet werden.</p>
@@ -107,6 +109,6 @@ export const DataPrivacyPage = () => {
           https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-data-protection-addendum#attachment-1–the-standard-contractual-clauses-processors
         </a>
       </p>
-    </>
+    </Page>
   )
 }

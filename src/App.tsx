@@ -38,7 +38,7 @@ const router = createHashRouter([
       {
         path: '/data-privacy',
         element: <DataPrivacyPage />,
-        handle: { title: 'Impress' },
+        handle: { title: 'Data Privacy' },
       },
       {
         path: '/cookie-dimension',

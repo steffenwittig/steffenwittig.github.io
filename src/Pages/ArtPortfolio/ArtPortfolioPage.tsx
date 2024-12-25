@@ -3,6 +3,7 @@ import { PortfolioCard, PortfolioCardProps } from 'Components/PortfolioCard/Port
 import { Instagram, Youtube } from '@styled-icons/boxicons-logos'
 import instaBackground from 'Assets/Portfolio/Thumbnails/Art/insta_thumb_bg.gif'
 import ytBackground from 'Assets/Portfolio/Thumbnails/Art/yt_thumb_bg.gif'
+import { Page } from 'Components/Page'
 
 const links: PortfolioCardProps[] = [
   {
@@ -25,7 +26,7 @@ const links: PortfolioCardProps[] = [
 
 export const ArtPortfolioPage = () => {
   return (
-    <>
+    <Page>
       <h1>Steffen Wittig the Artist</h1>
       <p>
         Welcome to my portfolio! It is currently under construction but you can browse my work on the following
@@ -34,6 +35,6 @@ export const ArtPortfolioPage = () => {
       {links.map((link) => (
         <PortfolioCard {...link} key={link.title} />
       ))}
-    </>
+    </Page>
   )
 }

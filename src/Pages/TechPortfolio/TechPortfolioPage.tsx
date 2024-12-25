@@ -2,6 +2,7 @@ import { PortfolioCard, PortfolioCardProps } from 'Components/PortfolioCard/Port
 
 import emofaniPreview from 'Assets/Portfolio/Thumbnails/Tech/emofani_preview.jpg'
 import portfolioPreview from 'Assets/Portfolio/Thumbnails/Tech/portfolio_preview.webp'
+import { Page } from 'Components/Page'
 
 const links: PortfolioCardProps[] = [
   {
@@ -55,7 +56,7 @@ const links: PortfolioCardProps[] = [
 
 export const TechPortfolioPage = () => {
   return (
-    <>
+    <Page>
       <h1>Steffen Wittig the Software Engineer</h1>
       <p>Let me introduce you to some public software projects that I've worked on over the years.</p>
       <p>
@@ -74,6 +75,6 @@ export const TechPortfolioPage = () => {
       {links.map((link) => (
         <PortfolioCard {...link} key={link.title} />
       ))}
-    </>
+    </Page>
   )
 }

@@ -1,8 +1,9 @@
+import { Page } from 'Components/Page'
 import { Link } from 'react-router-dom'
 
 export const ImpressPage = () => {
   return (
-    <>
+    <Page>
       <h1>Impress / Impressum (German)</h1>
       <p>Angaben gemäß § 5 des Telemediengesetzes​</p>
       <h2>Name des Anbieters</h2>
@@ -26,6 +27,6 @@ export const ImpressPage = () => {
       <p>
         Datenschutzhinweise finden Sie <Link to="/data-privacy">hier</Link>.
       </p>
-    </>
+    </Page>
   )
 }

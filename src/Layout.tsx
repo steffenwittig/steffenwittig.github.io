@@ -8,12 +8,10 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Header />
-      <div>
-        <Breadcrumbs />
-        {children}
-        <CookieNotice />
-        <Footer />
-      </div>
+      <Breadcrumbs />
+      {children}
+      <CookieNotice />
+      <Footer />
     </>
   )
 }

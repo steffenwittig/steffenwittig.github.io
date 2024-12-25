@@ -4,12 +4,16 @@ import styles from './Footer.module.scss'
 export const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <p>© Steffen Wittig</p>
-      <p>
-        <Link to="/impress">Impress</Link>,{' '}
-        <Link to="/data-privacy">Data Privacy</Link>,{' '}
+      <div>©2024 Steffen Wittig</div>
+      <div>
+        <Link to="/impress">Impress</Link>
+      </div>
+      <div>
+        <Link to="/data-privacy">Data Privacy</Link>
+      </div>
+      <div>
         <Link to="mailto:info@steffenwittig.com">Contact</Link>
-      </p>
+      </div>
     </footer>
   )
 }

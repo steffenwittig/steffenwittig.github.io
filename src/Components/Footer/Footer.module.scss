@@ -1,9 +1,9 @@
-.footer {
-  // text-align: center;
-  // margin-top: 2rem;
+@import 'Styles/mixins.scss';
 
-  // p {
-  //   margin-bottom: 0;
-  //   font-size: small;
-  // }
+.footer {
+  background-color: var(--bg-light);
+  padding: calc(var(--spacer) * 0.5) var(--spacer);
+  font-size: small;
+  @include flex;
+  margin-top: var(--spacer);
 }
