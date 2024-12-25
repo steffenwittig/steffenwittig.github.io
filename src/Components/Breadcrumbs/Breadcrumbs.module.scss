@@ -1,8 +1,13 @@
 @import 'Styles/mixins.scss';
 
-.nav {
-  @include container-full;
+$margin-lg: calc(var(--spacer) * 2);
 
+.container {
+  @include container-full;
+}
+
+.nav {
+  margin: $margin-lg $margin-lg 0 $margin-lg;
   ol {
     display: flex;
     padding: 0;

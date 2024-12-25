@@ -44,8 +44,12 @@ export const Breadcrumbs = () => {
   }
 
   return (
-    <nav role="tree" aria-label="Breadcrumb" className={styles.nav}>
-      <ol className={styles.breadcrumbs}>{crumbs.map((c: Crumb, i) => renderCrumb(c, i, i === crumbs.length - 1))}</ol>
-    </nav>
+    <div className={styles.container}>
+      <nav role="tree" aria-label="Breadcrumb" className={styles.nav}>
+        <ol className={styles.breadcrumbs}>
+          {crumbs.map((c: Crumb, i) => renderCrumb(c, i, i === crumbs.length - 1))}
+        </ol>
+      </nav>
+    </div>
   )
 }

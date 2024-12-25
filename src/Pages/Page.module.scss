@@ -1,6 +1,12 @@
 @import 'Styles/mixins.scss';
 
-.pageContent {
+.page {
   @include container-full;
+}
+
+.pageContent {
   background-color: var(--bg-light);
+  padding: var(--spacer);
+  margin: 0 var(--spacer);
+  overflow: scroll;
 }

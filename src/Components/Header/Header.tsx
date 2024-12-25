@@ -19,25 +19,23 @@ const headerLinks: IHeaderLink[] = [
 
 export const Header = () => {
   return (
-    <div className={styles.outer}>
-      <nav className={styles.nav} role="navigation" aria-label="Main">
-        <ul className={styles.navBrand}>
-          <li>
-            <h1>
-              <Link to="/">Steffen Wittig's Portfolio</Link>
-            </h1>
+    <nav className={styles.nav} role="navigation" aria-label="Main">
+      <ul className={styles.navBrand}>
+        <li>
+          <h1>
+            <Link to="/">Steffen Wittig's Portfolio</Link>
+          </h1>
+        </li>
+      </ul>
+      <ul>
+        {headerLinks.map((l) => (
+          <li key={l.title}>
+            <Link to={l.to} title={`Go to ${l.title} page`}>
+              {l.title}
+            </Link>
           </li>
-        </ul>
-        <ul>
-          {headerLinks.map((l) => (
-            <li key={l.title}>
-              <Link to={l.to} title={`Go to ${l.title} page`}>
-                {l.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </div>
+        ))}
+      </ul>
+    </nav>
   )
 }
