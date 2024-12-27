@@ -7,8 +7,10 @@ $black: #000;
 $cyan: #00d1ff;
 $cyan-dark: #1088a3;
 $magenta: #fa0862;
-$dark-grey: #433d51;
 $light-grey: #b4a9bb;
+$dark-grey: #433d51;
+$lighter-grey: mix($white, $light-grey, 70%);
+$darker-grey: mix($dark-grey, $black, 60%);
 
 // Sizes for layout
 $fontsize-base: 14px;

@@ -14,7 +14,7 @@ color vars
   :root {
     --col-bg: #{$black};
     --col-text: #{$white};
-    --col-bg-light: #{$dark-grey};
+    --col-bg-light: #{$darker-grey};
     --col-primary: #{$cyan};
     --col-text-on-primary: #{$black};
     --col-primary-highlight: #{$cyan-dark};
@@ -24,7 +24,7 @@ color vars
 
 @media (prefers-color-scheme: light) {
   :root {
-    --col-bg: #{$light-grey};
+    --col-bg: #{$lighter-grey};
     --col-text: #{$black};
     --col-bg-light: #{$white};
     --col-primary: #{$cyan-dark};
