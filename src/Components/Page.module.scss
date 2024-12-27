@@ -5,6 +5,7 @@
 }
 
 .pageContent {
+  @include box-shadow;
   background-color: var(--col-bg-light);
   padding: var(--space);
   margin: 0 var(--space);

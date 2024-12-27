@@ -1,6 +1,7 @@
 @import 'Styles/mixins.scss';
 
 .nav {
+  @include box-shadow;
   background-color: var(--col-bg-light);
   padding: calc(var(--space) * 0.5) var(--space);
   @media (min-width: $breakpoint-md) {

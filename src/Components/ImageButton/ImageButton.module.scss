@@ -1,14 +1,15 @@
+@import '/src/Styles/mixins.scss';
 @import '/src/Styles/variables.scss';
 
 .imageButton {
   transition: scale var(--anim-speed-base);
   flex: 1;
   background-color: var(--col-primary);
-
   color: var(--col-text-on-primary);
   text-decoration: none;
 
   &:hover {
+    @include box-shadow;
     scale: 1.05;
     color: var(--col-text);
     background-color: var(--col-primary-highlight);
