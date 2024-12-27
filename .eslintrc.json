@@ -1,6 +1,3 @@
 {
-  "extends": ["react-app"],
-  "rules": {
-    "additional-rule": "warn"
-  }
+  "extends": ["react-app"]
 }
