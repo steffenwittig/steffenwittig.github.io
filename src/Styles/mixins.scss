@@ -28,3 +28,7 @@
   @include flex;
   gap: calc(var(--space) * 0.5);
 }
+
+@mixin box-shadow {
+  box-shadow: 0 3px 10px var(--col-shadow);
+}

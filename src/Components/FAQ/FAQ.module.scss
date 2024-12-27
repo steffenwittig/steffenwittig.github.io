@@ -6,6 +6,10 @@
 }
 .header {
   @include flex;
+  cursor: pointer;
+  &:hover {
+    color: var(--col-primary);
+  }
 }
 .question {
   flex: 1;
@@ -13,6 +17,7 @@
 }
 .icon {
   transition: rotate var(--anim-speed-base);
+  margin-right: -0.8rem;
   > svg {
     height: 3rem;
   }

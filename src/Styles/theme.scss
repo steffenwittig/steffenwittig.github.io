@@ -19,6 +19,7 @@ color vars
     --col-text-on-primary: #{$black};
     --col-primary-highlight: #{$cyan-dark};
     --col-text-on-primary-highlight: #{$white};
+    --col-shadow: color-mix(in srgb, #{$black}, transparent 50%);
   }
 }
 
@@ -31,6 +32,7 @@ color vars
     --col-text-on-primary: #{$white};
     --col-primary-highlight: #{$cyan};
     --col-text-on-primary-highlight: #{$black};
+    --col-shadow: color-mix(in srgb, #{$dark-grey}, transparent 80%);
   }
 }
 
@@ -57,9 +59,9 @@ body {
 }
 
 a {
-  color: var(--col-primary);
+  color: var(--col-text);
   &:hover {
-    color: var(--col-primary-highlight);
+    color: var(--col-primary);
   }
 }
 
@@ -72,6 +74,6 @@ h3 {
 }
 
 hr {
-  margin: var(--space) 0;
+  margin: calc(var(--space) * 0.5) 0;
   border: none;
 }

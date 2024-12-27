@@ -20,7 +20,7 @@ export const HomePage = () => {
       </div>
       <hr />
       <h2>Frequently asked questions</h2>
-      <FAQ headingTag="h3" items={items} />
+      <FAQ questionTag="h3" items={items} />
     </Page>
   )
 }

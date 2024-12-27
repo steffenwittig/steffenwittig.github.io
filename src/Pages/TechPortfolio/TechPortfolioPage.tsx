@@ -1,4 +1,4 @@
-import { PortfolioCard, PortfolioCardProps } from 'Components/PortfolioCard/PortfolioCard'
+import { Portfolio, PortfolioCardProps } from 'Components/Portfolio/Portfolio'
 
 import emofaniPreview from 'Assets/Portfolio/Thumbnails/Tech/emofani_preview.jpg'
 import portfolioPreview from 'Assets/Portfolio/Thumbnails/Tech/portfolio_preview.webp'
@@ -72,9 +72,7 @@ export const TechPortfolioPage = () => {
           </small>
         </small>
       </p>
-      {links.map((link) => (
-        <PortfolioCard {...link} key={link.title} />
-      ))}
+      <Portfolio items={links} />
     </Page>
   )
 }
