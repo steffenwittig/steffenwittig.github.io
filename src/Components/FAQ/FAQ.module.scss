@@ -1,0 +1,24 @@
+@import 'Styles/mixins.scss';
+
+.outer {
+  padding: calc(var(--space) * 0.3) 0;
+  border-bottom: 1px solid var(--col-text);
+}
+.header {
+  @include flex;
+}
+.question {
+  flex: 1;
+  margin: 0;
+}
+.icon {
+  transition: rotate var(--anim-speed-base);
+  > svg {
+    height: 3rem;
+  }
+}
+.answer {
+  overflow: hidden;
+  transition: height calc(var(--anim-speed-base) * 3);
+  margin-top: calc(var(--space) * 0.3);
+}

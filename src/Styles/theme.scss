@@ -1,3 +1,7 @@
+/*
+There is no import for bootstrap or tailwind or the latest new and cool CSS framework?
+Nope. After many years of working with CSS/UI frameworks I wanted to experience again how it feels to start from zero. 😎
+*/
 @use 'sass:color';
 
 @import './variables.scss';
@@ -60,7 +64,14 @@ a {
 }
 
 p,
-h1 {
-  // default top margins must die
+h1,
+h2,
+h3 {
   margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+hr {
+  margin: var(--space) 0;
+  border: none;
 }
