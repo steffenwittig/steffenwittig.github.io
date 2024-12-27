@@ -3,4 +3,8 @@
 .grid {
   display: flex;
   gap: 1px;
+  flex-direction: column-reverse;
+  @media (min-width: $breakpoint-md) {
+    flex-direction: row;
+  }
 }
