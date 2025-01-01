@@ -2,7 +2,7 @@
 @import '/src/Styles/variables.scss';
 
 .imageButton {
-  transition: scale var(--anim-speed-base);
+  transition: scale var(--anim-speed-base) var(--anim-ease-func);
   flex: 1;
   background-color: var(--col-primary);
   color: var(--col-text-on-primary);

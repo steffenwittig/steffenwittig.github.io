@@ -5,8 +5,8 @@ const items: FaqItem[] = [
     question: 'Wait... there are two Steffen Wittigs?',
     answer: (
       <>
-        According to a quick Google search there are even more Steffen Wittigs! However, this page is home to the
-        portfolios of the artist and software engineer Steffen Wittigs.
+        <p>According to a quick Google search there are even more Steffen Wittigs!</p>
+        <p>However, this page is home to the portfolios of the artist and software engineer Steffen Wittigs.</p>
       </>
     ),
   },

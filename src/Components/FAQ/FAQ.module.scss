@@ -1,5 +1,7 @@
 @import 'Styles/mixins.scss';
 
+$iconSize: 3rem;
+
 .outer {
   padding: calc(var(--space) * 0.3) 0;
   border-bottom: 1px solid var(--col-text);
@@ -16,14 +18,14 @@
   margin: 0;
 }
 .icon {
-  transition: rotate var(--anim-speed-base);
   margin-right: -0.8rem;
   > svg {
-    height: 3rem;
+    transition: rotate var(--anim-speed-base) var(--anim-ease-func);
+    height: $iconSize;
   }
 }
 .answer {
   overflow: hidden;
-  transition: height calc(var(--anim-speed-base) * 3);
-  margin-top: calc(var(--space) * 0.3);
+  transition: height var(--anim-speed-base) var(--anim-ease-func);
+  padding-right: $iconSize;
 }
