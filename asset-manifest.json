@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.1f6d2678.css",
-    "main.js": "/static/js/main.89dfa469.js",
+    "main.css": "/static/css/main.84743df3.css",
+    "main.js": "/static/js/main.c94556e7.js",
     "static/media/yt_thumb_bg.gif": "/static/media/yt_thumb_bg.8084bddd6e0cfe5d1eb8.gif",
     "static/media/insta_thumb_bg.gif": "/static/media/insta_thumb_bg.05739c6eff5e82f73732.gif",
     "static/media/portfolio_preview.webp": "/static/media/portfolio_preview.8270510005a72dddcaf4.webp",
@@ -13,11 +13,11 @@
     "static/media/quicksand-vietnamese-300-normal.woff": "/static/media/quicksand-vietnamese-300-normal.ed4e0f9a27c50e2828d2.woff",
     "static/media/quicksand-vietnamese-300-normal.woff2": "/static/media/quicksand-vietnamese-300-normal.db627d49d61c1a2fc301.woff2",
     "index.html": "/index.html",
-    "main.1f6d2678.css.map": "/static/css/main.1f6d2678.css.map",
-    "main.89dfa469.js.map": "/static/js/main.89dfa469.js.map"
+    "main.84743df3.css.map": "/static/css/main.84743df3.css.map",
+    "main.c94556e7.js.map": "/static/js/main.c94556e7.js.map"
   },
   "entrypoints": [
-    "static/css/main.1f6d2678.css",
-    "static/js/main.89dfa469.js"
+    "static/css/main.84743df3.css",
+    "static/js/main.c94556e7.js"
   ]
 }
