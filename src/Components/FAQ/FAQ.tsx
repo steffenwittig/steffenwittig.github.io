@@ -27,6 +27,7 @@ export const FaqElement = ({ question, answer, questionTag: Question = 'div' }: 
   const updateBodyHeight = useCallback(() => {
     if (body.current) {
       body.current.style.height = expanded ? content.current?.clientHeight.toString() + 'px' : '0'
+      body.current.style.marginTop = expanded ? '' : '0'
     }
     if (indicator.current) {
       indicator.current.style.rotate = `${expanded ? '180' : '0'}deg`

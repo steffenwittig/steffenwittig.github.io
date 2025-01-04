@@ -1,4 +1,4 @@
-@import 'Styles/mixins.scss';
+@import 'Styles/variables.scss';
 
 .grid {
   display: flex;
@@ -6,5 +6,8 @@
   flex-direction: column;
   @media (min-width: $breakpoint-md) {
     flex-direction: row;
+  }
+  & > a:hover {
+    z-index: 10; // prevents strange looking overlap during transition
   }
 }
