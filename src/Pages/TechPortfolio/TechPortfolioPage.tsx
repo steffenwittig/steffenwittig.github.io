@@ -52,6 +52,14 @@ const links: PortfolioCardProps[] = [
     linkTitle: 'View Trailer on YouTube',
     linkUrl: 'https://www.youtube.com/watch?v=6wG_ZKciCEc',
   },
+  {
+    title: 'ResearchGate Profile',
+    description: (
+      <>During my Bachelor's studies I published some interesting articles about human-computer interaction.</>
+    ),
+    linkTitle: 'Visit ResearchGate',
+    linkUrl: 'https://www.researchgate.net/profile/Steffen-Wittig',
+  },
 ]
 
 export const TechPortfolioPage = () => {

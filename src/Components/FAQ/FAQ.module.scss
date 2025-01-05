@@ -10,8 +10,14 @@ $transition: var(--anim-speed-base) var(--anim-ease-func);
 .header {
   @include flex;
   cursor: pointer;
-  &:hover {
-    color: var(--col-primary);
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 0;
   }
 }
 .question {
@@ -32,6 +38,6 @@ $transition: var(--anim-speed-base) var(--anim-ease-func);
   transition:
     height $transition,
     margin-top $transition;
-  margin-top: var(--space);
+  margin-top: calc(var(--space) * 0.5);
   padding-right: $iconSize;
 }

@@ -1,32 +1,51 @@
 @import '/src/Styles/mixins.scss';
 @import '/src/Styles/variables.scss';
 
+$transition: var(--anim-speed-base) var(--anim-ease-func);
+
 .imageButton {
-  transition: scale var(--anim-speed-base) var(--anim-ease-func);
+  transition: scale $transition;
   flex: 1;
   background-color: var(--col-primary);
   color: var(--col-text-on-primary);
-  text-decoration: none;
+  overflow: visible;
+  scale: 1;
+  margin-top: 3rem;
 
   &:hover {
     @include box-shadow;
     scale: 1.05;
     color: var(--col-text);
     background-color: var(--col-primary-highlight);
+    .image {
+      bottom: 5rem;
+    }
   }
 }
 
-.image {
+.imageArea {
   aspect-ratio: 1;
+  width: 100%;
+  background-color: var(--col-shadow);
+}
+
+.image {
+  transition: bottom $transition;
+  position: absolute;
+  bottom: 4rem;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
-  width: 100%;
 }
 
 .title {
+  position: relative;
+  top: 0;
   text-align: center;
   padding: var(--space);
   font-size: xx-large;
+  background-color: var(--col-primary);
 }
 
 .subtitle {

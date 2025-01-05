@@ -60,9 +60,10 @@ body {
 }
 
 a {
-  color: var(--col-text);
+  color: var(--col-primary);
+  text-decoration: none;
   &:hover {
-    color: var(--col-primary);
+    color: var(--col-text);
   }
 }
 

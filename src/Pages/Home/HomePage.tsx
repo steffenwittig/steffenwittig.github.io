@@ -1,8 +1,8 @@
 import { FAQ } from 'Components/FAQ/FAQ'
 import { ImageButton } from 'Components/ImageButton/ImageButton'
 
-import instaBackground from 'Assets/Portfolio/Thumbnails/Art/insta_thumb_bg.gif'
-import emofaniBackground from 'Assets/Portfolio/Thumbnails/Tech/emofani_preview.jpg'
+import notsteffenwittig from 'Assets/Home/notsteffenwittig.webp'
+import steffenwittig from 'Assets/Home/steffenwittig.webp'
 import { Page } from 'Components/Page'
 import styles from './Homepage.module.scss'
 
@@ -15,8 +15,8 @@ export const HomePage = () => {
       <hr />
       <p>Which Steffen Wittig are you interested in?</p>
       <div className={styles.grid}>
-        <ImageButton to="tech" title="Steffen Wittig" subtitle="The software engineer" image={emofaniBackground} />
-        <ImageButton to="art" title="NotSteffenWittig" subtitle="The artist" image={instaBackground} />
+        <ImageButton to="tech" title="Steffen Wittig" subtitle="The software engineer" image={steffenwittig} />
+        <ImageButton to="art" title="NotSteffenWittig" subtitle="The artist" image={notsteffenwittig} />
       </div>
       <hr />
       <h2>Frequently asked questions</h2>
