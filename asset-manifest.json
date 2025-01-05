@@ -1,11 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.2803880a.css",
-    "main.js": "/static/js/main.6166f97e.js",
+    "main.css": "/static/css/main.0d05cc5b.css",
+    "main.js": "/static/js/main.e3b655e2.js",
     "static/media/yt_thumb_bg.gif": "/static/media/yt_thumb_bg.8084bddd6e0cfe5d1eb8.gif",
     "static/media/insta_thumb_bg.gif": "/static/media/insta_thumb_bg.05739c6eff5e82f73732.gif",
     "static/media/portfolio_preview.webp": "/static/media/portfolio_preview.8270510005a72dddcaf4.webp",
     "static/media/emofani_preview.jpg": "/static/media/emofani_preview.0031f6ca6feb72dd78a2.jpg",
+    "static/media/steffenwittig.webp": "/static/media/steffenwittig.7e8447ce488d56924db1.webp",
+    "static/media/notsteffenwittig.webp": "/static/media/notsteffenwittig.76f65f0eb08544218ee5.webp",
     "static/media/quicksand-latin-ext-300-normal.woff": "/static/media/quicksand-latin-ext-300-normal.9c9ec1c3421f0997eb4f.woff",
     "static/media/quicksand-latin-300-normal.woff": "/static/media/quicksand-latin-300-normal.6de22f777c45a3edb45d.woff",
     "static/media/quicksand-latin-300-normal.woff2": "/static/media/quicksand-latin-300-normal.95739bae907aeb786822.woff2",
@@ -13,11 +15,11 @@
     "static/media/quicksand-vietnamese-300-normal.woff": "/static/media/quicksand-vietnamese-300-normal.ed4e0f9a27c50e2828d2.woff",
     "static/media/quicksand-vietnamese-300-normal.woff2": "/static/media/quicksand-vietnamese-300-normal.db627d49d61c1a2fc301.woff2",
     "index.html": "/index.html",
-    "main.2803880a.css.map": "/static/css/main.2803880a.css.map",
-    "main.6166f97e.js.map": "/static/js/main.6166f97e.js.map"
+    "main.0d05cc5b.css.map": "/static/css/main.0d05cc5b.css.map",
+    "main.e3b655e2.js.map": "/static/js/main.e3b655e2.js.map"
   },
   "entrypoints": [
-    "static/css/main.2803880a.css",
-    "static/js/main.6166f97e.js"
+    "static/css/main.0d05cc5b.css",
+    "static/js/main.e3b655e2.js"
   ]
 }
