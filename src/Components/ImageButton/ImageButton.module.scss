@@ -12,13 +12,18 @@ $transition: var(--anim-speed-base) var(--anim-ease-func);
   scale: 1;
   margin-top: 4rem;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     @include box-shadow;
     scale: 1.05;
     color: var(--col-text);
     background-color: var(--col-primary-highlight);
+    z-index: 10;
     .image {
       bottom: 5rem;
+    }
+    .title {
+      background-color: var(--col-primary-highlight);
     }
   }
 }

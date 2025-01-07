@@ -5,6 +5,7 @@ import styles from './FAQ.module.scss'
 type QuestionTagType = 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 
 export type FaqItem = {
+  id: string
   question: string
   answer: JSX.Element
   questionTag?: QuestionTagType
@@ -20,7 +21,7 @@ export const FAQ = ({ items, questionTag }: { items: FaqItem[]; questionTag?: Qu
   )
 }
 
-export const FaqElement = ({ question, answer, questionTag: Question = 'span' }: FaqItem) => {
+export const FaqElement = ({ id, question, answer, questionTag: Question = 'span' }: FaqItem) => {
   const [expanded, setExpanded] = useState<boolean>(false)
   const body = useRef<HTMLDivElement>(null)
   const content = useRef<HTMLDivElement>(null)
@@ -42,16 +43,31 @@ export const FaqElement = ({ question, answer, questionTag: Question = 'span' }:
 
   return (
     <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className={styles.outer}>
-      <a className={styles.header} onClick={() => setExpanded(!expanded)}>
-        <div itemProp="name" className={styles.question}>
-          <Question>{question}</Question>
-        </div>
-        <div className={styles.icon}>
-          <ChevronDown ref={indicator} />
-        </div>
-      </a>
+      <Question>
+        <button
+          className={styles.header}
+          onClick={() => setExpanded(!expanded)}
+          tabIndex={0}
+          id={id}
+          aria-expanded={expanded}
+        >
+          <div itemProp="name" className={styles.question}>
+            {question}
+          </div>
+          <div className={styles.icon}>
+            <ChevronDown ref={indicator} />
+          </div>
+        </button>
+      </Question>
       <div className={styles.answer} ref={body}>
-        <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer" ref={content}>
+        <div
+          itemScope
+          itemProp="acceptedAnswer"
+          itemType="https://schema.org/Answer"
+          ref={content}
+          role="region"
+          aria-labelledby={id}
+        >
           <div itemProp="text">{answer}</div>
         </div>
       </div>

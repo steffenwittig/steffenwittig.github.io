@@ -1,15 +1,12 @@
 @import 'Styles/mixins.scss';
 
-$iconSize: 3rem;
+$iconSize: 2.2rem;
 $transition: var(--anim-speed-base) var(--anim-ease-func);
 
 .outer {
   padding: var(--space) 0;
   border-bottom: 1px solid var(--col-text);
-}
-.header {
-  @include flex;
-  cursor: pointer;
+
   span,
   h1,
   h2,
@@ -20,6 +17,17 @@ $transition: var(--anim-speed-base) var(--anim-ease-func);
     margin-bottom: 0;
   }
 }
+.header {
+  @include flex;
+  @include unbutton;
+  font-size: large;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--col-text);
+  }
+}
 .question {
   flex: 1;
   margin: 0;
@@ -27,7 +35,7 @@ $transition: var(--anim-speed-base) var(--anim-ease-func);
 .icon {
   height: 0rem;
   margin-top: -$iconSize;
-  margin-right: -0.8rem;
+  margin-right: -$iconSize * 0.25;
   > svg {
     transition: rotate $transition;
     height: $iconSize;

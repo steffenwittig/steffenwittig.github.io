@@ -5,11 +5,10 @@ type IImageButtonProps = {
   title: string
   subtitle?: string
   image: string
-  icon?: React.ReactNode
   to: string
 }
 
-export const ImageButton = ({ title, subtitle, image, icon, to }: IImageButtonProps) => {
+export const ImageButton = ({ title, subtitle, image, to }: IImageButtonProps) => {
   return (
     <Link to={to} role="button" className={styles.imageButton}>
       <div className={styles.imageArea}>

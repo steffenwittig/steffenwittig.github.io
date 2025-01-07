@@ -32,3 +32,14 @@
 @mixin box-shadow {
   box-shadow: 0 3px 10px var(--col-shadow);
 }
+
+@mixin unbutton {
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 0;
+  color: var(--col-primary);
+  font-family: var(--font-family);
+  font-size: medium;
+}

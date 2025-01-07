@@ -2,6 +2,7 @@ import { FaqItem } from 'Components/FAQ/FAQ'
 
 const items: FaqItem[] = [
   {
+    id: 'homeFaq1',
     question: 'Wait... there are two Steffen Wittigs?',
     answer: (
       <>
@@ -11,6 +12,7 @@ const items: FaqItem[] = [
     ),
   },
   {
+    id: 'homeFaq2',
     question: 'This page contains two portfolios? ',
     answer: (
       <>
@@ -33,6 +35,7 @@ const items: FaqItem[] = [
     ),
   },
   {
+    id: 'homeFaq3',
     question: 'Who is NotSteffenWittig and is he Steffen Wittig or not?',
     answer: (
       <>
