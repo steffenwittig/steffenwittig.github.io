@@ -1,4 +1,4 @@
-import { Moon, Sun } from '@styled-icons/boxicons-regular'
+import { Cool, Happy } from '@styled-icons/boxicons-regular'
 import { Button } from 'Components/Button/Button'
 import { Theme, useTheme } from 'Hooks/useTheme'
 import { Link } from 'react-router-dom'
@@ -30,7 +30,7 @@ const ThemeToggle = () => {
         title="Switch Theme"
         onClick={() => setTheme(theme === Theme.dark ? Theme.light : Theme.dark)}
       >
-        {theme === Theme.dark ? <Moon /> : <Sun />}
+        {theme === Theme.dark ? <Cool /> : <Happy />}
       </Button>
     </div>
   )
