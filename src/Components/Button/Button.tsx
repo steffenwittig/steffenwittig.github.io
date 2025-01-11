@@ -1,17 +1,18 @@
+import { PropsWithChildren } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styles from './Button.module.scss'
 
 type ButtonProps = {
   title: string
   onClick?: () => void
-  border?: boolean
+  variant?: 'border' | 'link'
   to?: string
 }
 
-export const Button = ({ title, onClick, border, to }: ButtonProps) => {
+export const Button = ({ title, onClick, variant, to, children }: PropsWithChildren<ButtonProps>) => {
   const navigate = useNavigate()
 
-  const classes = [styles.button, border ? styles.borderPrimary : styles.primary]
+  const classes = [styles.button, variant ? styles[variant] : '']
 
   const handleClick = () => {
     if (onClick) onClick()
@@ -20,7 +21,7 @@ export const Button = ({ title, onClick, border, to }: ButtonProps) => {
 
   return (
     <button title={title} onClick={handleClick} className={classes.join(' ')} role="button">
-      {title}
+      {children ? children : title}
     </button>
   )
 }

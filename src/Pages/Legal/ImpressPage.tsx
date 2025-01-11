@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 export const ImpressPage = () => {
   return (
     <Page>
-      <h1>Impress / Impressum (German)</h1>
+      <h2>Impress / Impressum (German)</h2>
       <p>Angaben gemäß § 5 des Telemediengesetzes​</p>
-      <h2>Name des Anbieters</h2>
+      <h3>Name des Anbieters</h3>
       <p>
         Steffen Wittig
         <br />
@@ -16,14 +16,14 @@ export const ImpressPage = () => {
         <br />
         Germany
       </p>
-      <h2>Kontaktdaten</h2>
+      <h3>Kontaktdaten</h3>
       <p>
         E-Mail: <a href="mailto:info@steffenwittig.com">info@steffenwittig.com</a>
       </p>
       <p>
         Internetseite: <a href="https://steffenwittig.github.io">https://steffenwittig.github.io</a>
       </p>
-      <h2>Datenschutz</h2>
+      <h3>Datenschutz</h3>
       <p>
         Datenschutzhinweise finden Sie <Link to="/data-privacy">hier</Link>.
       </p>

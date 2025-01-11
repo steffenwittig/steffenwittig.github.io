@@ -3,8 +3,8 @@ import { Page } from 'Components/Page'
 export const DataPrivacyPage = () => {
   return (
     <Page>
-      <h1>Data Privacy (German)</h1>
-      <h2>Datenschutzerklärung</h2>
+      <h2>Data Privacy (German)</h2>
+      <h3>Datenschutzerklärung</h3>
       <p>Im Folgenden möchten wir Sie aufklären, wie Ihre Daten von uns verarbeitet werden.</p>
       <p>
         <strong>Verantwortlich im Sinne der DSGVO ist:</strong>
@@ -54,7 +54,7 @@ export const DataPrivacyPage = () => {
         .
       </p>
 
-      <h2>Hosting</h2>
+      <h3>Hosting</h3>
       <p>
         <br /> Unser Hoster erhebt in sog. Logfiles folgende Daten, die Ihr Browser übermittelt:
       </p>

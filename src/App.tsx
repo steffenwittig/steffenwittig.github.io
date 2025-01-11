@@ -1,3 +1,4 @@
+import { Theme, useTheme } from 'Hooks/useTheme'
 import { Layout } from 'Layout'
 import { TechPortfolioPage } from 'Pages/TechPortfolio/TechPortfolioPage'
 import { Outlet, RouterProvider, createHashRouter } from 'react-router-dom'
@@ -56,7 +57,13 @@ const router = createHashRouter([
 ])
 
 const App = () => {
-  return <RouterProvider router={router} />
+  const [theme] = useTheme()
+
+  return (
+    <div className="app" data-theme={theme === Theme.dark ? 'dark' : 'light'}>
+      <RouterProvider router={router} />
+    </div>
+  )
 }
 
 export default App

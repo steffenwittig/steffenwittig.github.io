@@ -18,7 +18,7 @@ export const CookieDimension = () => {
   return (
     <div className={styles.outer}>
       <div className={styles.content}>
-        <p>You have found the secret cookie dimension.</p>
+        <h2>You have found the secret cookie dimension.</h2>
         <div className={styles.cookies}>{cookies}</div>
         <Link to="/">Get me out of here!</Link>
       </div>

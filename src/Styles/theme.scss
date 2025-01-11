@@ -10,30 +10,27 @@ Nope. After many years of working with CSS/UI frameworks I wanted to experience 
 /*
 color vars
 */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --col-bg: #{$black};
-    --col-text: #{$white};
-    --col-bg-light: #{$darker-grey};
-    --col-primary: #{$cyan};
-    --col-text-on-primary: #{$black};
-    --col-primary-highlight: #{$cyan-dark};
-    --col-text-on-primary-highlight: #{$white};
-    --col-shadow: color-mix(in srgb, #{$black}, transparent 50%);
-  }
+
+:root {
+  --col-bg: #{$black};
+  --col-text: #{$white};
+  --col-bg-light: #{$darker-grey};
+  --col-primary: #{$cyan};
+  --col-text-on-primary: #{$black};
+  --col-primary-highlight: #{$cyan-dark};
+  --col-text-on-primary-highlight: #{$white};
+  --col-shadow: color-mix(in srgb, #{$black}, transparent 50%);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --col-bg: #{$lighter-grey};
-    --col-text: #{$black};
-    --col-bg-light: #{$white};
-    --col-primary: #{$cyan-dark};
-    --col-text-on-primary: #{$white};
-    --col-primary-highlight: #{$cyan};
-    --col-text-on-primary-highlight: #{$black};
-    --col-shadow: color-mix(in srgb, #{$dark-grey}, transparent 80%);
-  }
+[data-theme='light'] {
+  --col-bg: #{$lighter-grey};
+  --col-text: #{$black};
+  --col-bg-light: #{$white};
+  --col-primary: #{$cyan-dark};
+  --col-text-on-primary: #{$white};
+  --col-primary-highlight: #{$cyan};
+  --col-text-on-primary-highlight: #{$black};
+  --col-shadow: color-mix(in srgb, #{$dark-grey}, transparent 80%);
 }
 
 /*
@@ -54,10 +51,13 @@ basic styles
 }
 
 body {
+  margin: 0;
+}
+
+.app {
   background-color: var(--col-bg);
   font-family: var(--font-family);
   color: var(--col-text);
-  margin: 0;
 }
 
 a {
@@ -68,12 +68,27 @@ a {
   }
 }
 
+/*
+typograpby
+*/
 p,
 h1,
 h2,
 h3 {
   margin-top: 0;
   margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.4rem;
 }
 
 hr {

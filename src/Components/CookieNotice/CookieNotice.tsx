@@ -1,8 +1,7 @@
+import { Button } from 'Components/Button/Button'
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import useLocalStorageState from 'use-local-storage-state'
 import styles from './CookieNotice.module.scss'
-import { Button } from 'Components/Button/Button'
 
 enum CookieNoticeState {
   HIDDEN,
@@ -38,7 +37,7 @@ const Elements = () => {
           <p>No Cookies here. Happy browsing!</p>
           <div className={styles.buttons}>
             <Button onClick={hideAndSave} title="Nice!" />
-            <Button onClick={() => setState(CookieNoticeState.WHY)} border={true} title="Why not?" />
+            <Button onClick={() => setState(CookieNoticeState.WHY)} variant="border" title="Why not?" />
           </div>
         </div>
       )
@@ -48,7 +47,11 @@ const Elements = () => {
           <p>I am just a simple webapp without a backend and all that jazz. So I don't need cookies to function. 😊</p>
           <div className={styles.buttons}>
             <Button onClick={() => hideAndSave} title="Oh alright. Thanks!" />
-            <Button onClick={() => setState(CookieNoticeState.WANTCOOKIE)} border={true} title="But I want a cookie!" />
+            <Button
+              onClick={() => setState(CookieNoticeState.WANTCOOKIE)}
+              variant="border"
+              title="But I want a cookie!"
+            />
           </div>
         </div>
       )
@@ -57,7 +60,7 @@ const Elements = () => {
         <div className={styles.notice}>
           <p>Please pick up your Cookie then.</p>
           <div className={styles.buttons}>
-            <Button to="/cookie-dimension" title="🍪" onClick={hideAndSave} border={true}></Button>
+            <Button to="/cookie-dimension" title="🍪" onClick={hideAndSave} variant="border"></Button>
           </div>
         </div>
       )

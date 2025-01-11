@@ -1,11 +1,21 @@
 @import 'Styles/mixins.scss';
 
-.nav {
+.outer {
   @include box-shadow;
   background-color: var(--col-bg-light);
   padding: calc(var(--space) * 0.5) var(--space);
+  @include flex;
+  justify-content: space-between;
   @media (min-width: $breakpoint-md) {
     @include flex;
+  }
+  align-items: start;
+}
+
+.nav {
+  @media (min-width: $breakpoint-md) {
+    @include flex;
+    align-items: end;
   }
 
   ul {
@@ -25,4 +35,28 @@
 
 .navBrand {
   flex: 1;
+  h1 {
+    margin-bottom: calc(var(--space) * 0.5);
+    @media (min-width: $breakpoint-md) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.entries {
+  li {
+    padding-bottom: 0.25rem;
+  }
+}
+
+.toggle {
+  svg {
+    margin-top: 0.5rem;
+    width: 1.4rem;
+    height: 1.4rem;
+
+    @media (min-width: $breakpoint-md) {
+      margin-top: 0;
+    }
+  }
 }

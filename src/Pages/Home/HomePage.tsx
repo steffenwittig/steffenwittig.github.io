@@ -11,7 +11,7 @@ import items from './HomepageFaq'
 export const HomePage = () => {
   return (
     <Page>
-      <h1>Welcome to our portfolios!</h1>
+      <h2>Welcome to our portfolios!</h2>
       <hr />
       <p>Which Steffen Wittig are you interested in?</p>
       <div className={styles.grid}>

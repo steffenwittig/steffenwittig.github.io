@@ -65,7 +65,7 @@ const links: PortfolioCardProps[] = [
 export const TechPortfolioPage = () => {
   return (
     <Page>
-      <h1>Steffen Wittig the Software Engineer</h1>
+      <h2>Steffen Wittig the Software Engineer</h2>
       <p>Let me introduce you to some public software projects that I've worked on over the years.</p>
       <p>
         There's of course many more secret non-public projects... you can ask me about them privately by chatting with

@@ -4,7 +4,7 @@
   border: none;
 }
 
-.primary {
+.default {
   background-color: var(--col-primary);
   color: var(--col-text-on-primary);
   &:hover {
@@ -13,7 +13,7 @@
   }
 }
 
-.borderPrimary {
+.border {
   background: transparent;
   outline-style: solid;
   outline-width: 1px;
@@ -21,7 +21,16 @@
   outline-offset: -1px;
   color: var(--col-primary);
   &:hover {
-    outline-color: var(--col-primary-highlight);
-    color: var(--col-primary-highlight);
+    outline-color: var(--col-text);
+    color: var(--col-text);
+  }
+}
+
+.link {
+  padding: 0;
+  background: transparent;
+  color: var(--col-primary);
+  &:hover {
+    color: var(--col-text);
   }
 }

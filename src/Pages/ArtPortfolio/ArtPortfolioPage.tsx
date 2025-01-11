@@ -33,7 +33,7 @@ const links: PortfolioCardProps[] = [
 export const ArtPortfolioPage = () => {
   return (
     <Page>
-      <h1>Steffen Wittig the Artist</h1>
+      <h2>Steffen Wittig the Artist</h2>
       <hr />
       <p>
         Welcome to my portfolio! It is currently under construction but you can browse my work on the following
