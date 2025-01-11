@@ -13,9 +13,9 @@
 }
 
 .nav {
+  width: 100%;
   @media (min-width: $breakpoint-md) {
     @include flex;
-    align-items: end;
   }
 
   ul {
@@ -31,21 +31,37 @@
   h1 {
     margin: 0;
   }
+
+  hr {
+    display: none;
+    @media (min-width: $breakpoint-md) {
+      display: block;
+      border-right: 1px solid var(--col-text);
+      height: var(--height-h1);
+      margin: 0;
+    }
+  }
 }
 
 .navBrand {
-  flex: 1;
+  flex-grow: 1;
+
   h1 {
     margin-bottom: calc(var(--space) * 0.5);
     @media (min-width: $breakpoint-md) {
       margin-bottom: 0;
     }
   }
-}
 
-.entries {
-  li {
-    padding-bottom: 0.25rem;
+  svg {
+    height: calc(var(--height-h1) + 0.4rem);
+    margin-bottom: -0.4rem;
+    width: auto;
+    fill: var(--col-primary);
+  }
+
+  a:hover svg {
+    fill: var(--col-text);
   }
 }
 

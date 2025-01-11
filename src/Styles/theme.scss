@@ -68,30 +68,4 @@ a {
   }
 }
 
-/*
-typograpby
-*/
-p,
-h1,
-h2,
-h3 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-}
-
-h1 {
-  font-size: 1.8rem;
-}
-
-h2 {
-  font-size: 1.6rem;
-}
-
-h3 {
-  font-size: 1.4rem;
-}
-
-hr {
-  margin: calc(var(--space) * 0.5) 0;
-  border: none;
-}
+@import './theme/typography.scss';

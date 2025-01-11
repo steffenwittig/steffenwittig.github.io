@@ -1,5 +1,7 @@
 import { Cool, Happy } from '@styled-icons/boxicons-regular'
+import { ReactComponent as ArtLogo } from 'Assets/logo_notsteffenwittig.svg'
 import { Button } from 'Components/Button/Button'
+import { useArtmode } from 'Hooks/useArtmode'
 import { Theme, useTheme } from 'Hooks/useTheme'
 import { Link } from 'react-router-dom'
 import styles from './Header.module.scss'
@@ -19,6 +21,20 @@ const headerLinks: HeaderLink[] = [
     title: 'Tech',
   },
 ]
+
+const BrandElement = () => {
+  const isArtMode = useArtmode()
+
+  return (
+    <Link to="/">
+      <h1>
+        <span style={{ display: isArtMode ? 'none' : '' }}>Steffen Wittig</span>
+        <ArtLogo style={{ display: isArtMode ? '' : 'none' }} />
+        <span>'s Portfolio</span>
+      </h1>
+    </Link>
+  )
+}
 
 const ThemeToggle = () => {
   const [theme, setTheme] = useTheme()
@@ -42,12 +58,10 @@ export const Header = () => {
       <nav className={styles.nav} role="navigation" aria-label="Main">
         <ul className={styles.navBrand}>
           <li>
-            <h1>
-              <Link to="/">Steffen Wittig's Portfolio</Link>
-            </h1>
+            <BrandElement />
           </li>
         </ul>
-        <ul className={styles.entries}>
+        <ul>
           {headerLinks.map((l) => (
             <li key={l.title}>
               <Link to={l.to} title={`Go to ${l.title} page`}>
@@ -56,8 +70,9 @@ export const Header = () => {
             </li>
           ))}
         </ul>
+        <hr />
+        <ThemeToggle />
       </nav>
-      <ThemeToggle />
     </div>
   )
 }
