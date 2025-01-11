@@ -28,8 +28,10 @@ const BrandElement = () => {
   return (
     <Link to="/">
       <h1>
-        <span style={{ display: isArtMode ? 'none' : '' }}>Steffen Wittig</span>
-        <ArtLogo style={{ display: isArtMode ? '' : 'none' }} />
+        <span style={{ display: isArtMode ? 'none' : '' }} aria-hidden={isArtMode}>
+          Steffen Wittig
+        </span>
+        <ArtLogo style={{ display: isArtMode ? '' : 'none' }} title="NotSteffenWittig" aria-hidden={!isArtMode} />
         <span>'s Portfolio</span>
       </h1>
     </Link>
@@ -71,8 +73,8 @@ export const Header = () => {
           ))}
         </ul>
         <hr />
-        <ThemeToggle />
       </nav>
+      <ThemeToggle />
     </div>
   )
 }

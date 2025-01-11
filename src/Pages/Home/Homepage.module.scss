@@ -9,7 +9,15 @@
   @media (min-width: $breakpoint-md) {
     flex-direction: row;
   }
-  & > a:hover {
-    z-index: 10; // prevents strange looking overlap during transition
+  & > a {
+    flex: 1;
+
+    &:hover {
+      z-index: 10; // prevents strange looking overlap during transition
+    }
   }
+}
+
+.logo {
+  max-width: 100%;
 }

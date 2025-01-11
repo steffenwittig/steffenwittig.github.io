@@ -24,6 +24,9 @@ $transition: var(--anim-speed-base) var(--anim-ease-func);
     }
     .title {
       background-color: var(--col-primary-highlight);
+      svg {
+        fill: var(--col-text);
+      }
     }
   }
 }
@@ -49,8 +52,13 @@ $transition: var(--anim-speed-base) var(--anim-ease-func);
   top: 0;
   text-align: center;
   padding: var(--space);
-  font-size: xx-large;
+  font-size: var(--height-h1);
   background-color: var(--col-primary);
+
+  svg {
+    height: var(--height-h1);
+    fill: var(--col-text-on-primary);
+  }
 }
 
 .subtitle {

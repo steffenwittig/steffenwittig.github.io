@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import styles from './ImageButton.module.scss'
 
 type IImageButtonProps = {
-  title: string
+  title: string | JSX.Element
   subtitle?: string
   image: string
   to: string
