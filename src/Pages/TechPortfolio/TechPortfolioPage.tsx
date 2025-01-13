@@ -2,6 +2,7 @@ import { Portfolio, PortfolioCardProps } from 'Components/Portfolio/Portfolio'
 
 import emofaniPreview from 'Assets/Portfolio/Thumbnails/Tech/emofani_preview.jpg'
 import portfolioPreview from 'Assets/Portfolio/Thumbnails/Tech/portfolio_preview.webp'
+import { Button } from 'Components/Button/Button'
 import { Page } from 'Components/Page'
 
 const links: PortfolioCardProps[] = [
@@ -79,9 +80,9 @@ export const TechPortfolioPage = () => {
       <p>
         There's of course many more secret non-public projects... you can ask me about them privately by chatting with
         my 100% self-implemented{' '}
-        <a href="javascript:void(0)" onClick={() => alert('Not ready, yet.')}>
+        <Button title="Start the chat bot" variant="link" onClick={() => alert('Not ready, yet.')}>
           chat bot
-        </a>
+        </Button>
         .{' '}
         <small>
           <small>
