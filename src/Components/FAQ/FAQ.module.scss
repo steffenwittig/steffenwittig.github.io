@@ -1,10 +1,9 @@
-@import 'Styles/mixins.scss';
+@import 'Styles/mixins';
 
 $iconSize: 2.2rem;
-$transition: var(--anim-speed-base) var(--anim-ease-func);
 
 .outer {
-  padding: var(--space) 0;
+  padding: var(--space-4) 0;
   border-bottom: 1px solid var(--col-text);
 
   span,
@@ -37,15 +36,15 @@ $transition: var(--anim-speed-base) var(--anim-ease-func);
   margin-top: -$iconSize;
   margin-right: -$iconSize * 0.25;
   > svg {
-    transition: rotate $transition;
+    transition: rotate $transitionFast;
     height: $iconSize;
   }
 }
 .answer {
   overflow: hidden;
   transition:
-    height $transition,
-    margin-top $transition;
-  margin-top: calc(var(--space) * 0.5);
+    height $transitionFast,
+    margin-top $transitionFast;
+  margin-top: var(--space-2);
   padding-right: $iconSize;
 }

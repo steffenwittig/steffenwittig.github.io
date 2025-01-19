@@ -1,15 +1,15 @@
-@import 'Styles/mixins.scss';
+@import 'Styles/mixins';
 
 .outer {
   @include box-shadow;
   background-color: var(--col-bg-light);
-  padding: calc(var(--space) * 0.5) var(--space);
+  padding: var(--space-4) var(--space-4);
   @include flex;
   justify-content: space-between;
   @media (min-width: $breakpoint-md) {
     @include flex;
   }
-  align-items: start;
+  align-items: flex-start;
 }
 
 .nav {
@@ -47,7 +47,7 @@
   flex-grow: 1;
 
   h1 {
-    margin-bottom: calc(var(--space) * 0.5);
+    margin-bottom: var(--space-4);
     @media (min-width: $breakpoint-md) {
       margin-bottom: 0;
     }
@@ -68,8 +68,8 @@
 .toggle {
   svg {
     margin-top: 0.5rem;
-    width: 1.4rem;
-    height: 1.4rem;
+    width: var(--icon-size-base);
+    height: var(--icon-size-base);
 
     @media (min-width: $breakpoint-md) {
       margin-top: 0;

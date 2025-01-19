@@ -1,12 +1,12 @@
-@import 'Styles/mixins.scss';
+@import 'Styles/mixins';
 
 .outer {
   @include container-full;
 }
 
 .content {
-  margin: var(--space);
-  padding: var(--space);
+  margin: var(--space-4);
+  padding: var(--space-4);
 }
 
 .cookies {

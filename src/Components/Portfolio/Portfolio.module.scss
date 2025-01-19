@@ -1,16 +1,16 @@
-@import 'Styles/mixins.scss';
-@import 'Styles/variables.scss';
+@import 'Styles/mixins';
+@import 'Styles/variables';
 
-$innerMargin: calc(var(--space) * 0.5);
+$innerMargin: var(--space-2);
 
 .grid {
-  @include flex;
+  @include flex();
   flex-direction: column;
 }
 
 .card {
-  @include box-shadow;
-  padding: var(--space);
+  @include box-shadow();
+  padding: var(--space-4);
   width: 100%;
 
   h2 {
@@ -49,51 +49,3 @@ $innerMargin: calc(var(--space) * 0.5);
 .description {
   margin-bottom: $innerMargin;
 }
-
-// .card {
-//   // text-align: center;
-
-//   // .flex {
-//   //   img {
-//   //     margin-bottom: 2rem;
-//   //   }
-//   // }
-
-//   // text-align: unset;
-
-//   // .flex {
-//   //   text-align: left;
-//   //   display: flex;
-//   //   gap: 2rem;
-
-//   //   div {
-//   //     flex: 1;
-
-//   //     &.preview {
-//   //       background: $grey-800;
-//   //       background-size: cover;
-
-//   //       svg,
-//   //       .spacer {
-//   //         padding: 3rem;
-//   //         width: 100%;
-//   //         aspect-ratio: 1;
-//   //         margin: 0 auto;
-//   //         filter: drop-shadow(0 0.2rem 0.3rem black);
-//   //       }
-//   //     }
-//   //   }
-//   // }
-
-//   // button {
-//   //   width: auto;
-//   // }
-//   // @media (max-width: map-get($breakpoints, 'sm')) {
-//   //   .flex {
-//   //     display: unset;
-//   //     .preview {
-//   //       margin-bottom: 1rem;
-//   //     }
-//   //   }
-//   // }
-// }

@@ -1,10 +1,10 @@
-@import 'Styles/mixins.scss';
+@import 'Styles/mixins';
 
 .footer {
-  @include box-shadow;
+  @include box-shadow();
   background-color: var(--col-bg-light);
-  padding: calc(var(--space) * 0.5) var(--space);
+  padding: var(--space-2) var(--space-4);
   font-size: small;
-  @include flex;
-  margin-top: var(--space);
+  @include flex();
+  margin-top: var(--space-4);
 }

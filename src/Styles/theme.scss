@@ -4,8 +4,12 @@ Nope. After many years of working with CSS/UI frameworks I wanted to experience 
 */
 @use 'sass:color';
 
-@import './variables.scss';
+@import './variables';
 @import '@fontsource/quicksand/300.css';
+
+@mixin spacing($factor) {
+  --space-#{$factor}: calc(#{$space} * #{$factor});
+}
 
 /*
 color vars
@@ -37,10 +41,13 @@ color vars
 ui vars
 */
 :root {
-  --space: 2rem;
-  --anim-speed-base: 0.3s;
+  @for $i from 1 through 8 {
+    @include spacing($i);
+  }
+  --transition-duration-base: 0.3s;
   --anim-ease-func: cubic-bezier(0.2, 0.9, 0.3, 1.2);
   --font-family: 'Quicksand';
+  --icon-size-base: 1.5rem;
 }
 
 /*
@@ -52,12 +59,16 @@ basic styles
 
 body {
   margin: 0;
+  background-color: $black;
 }
 
 .app {
   background-color: var(--col-bg);
   font-family: var(--font-family);
   color: var(--col-text);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 a {
@@ -68,4 +79,4 @@ a {
   }
 }
 
-@import './theme/typography.scss';
+@import './theme/typography';

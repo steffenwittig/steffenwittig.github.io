@@ -1,9 +1,10 @@
-@import 'Styles/variables.scss';
+@import 'Styles/variables';
 
 .grid {
   display: flex;
   gap: 1px;
-  flex-direction: column;
+  flex-direction: column-reverse;
+
   max-width: 38rem;
   margin: 0 auto 4rem auto;
   @media (min-width: $breakpoint-md) {

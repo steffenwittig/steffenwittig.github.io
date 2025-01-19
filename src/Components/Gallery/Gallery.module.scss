@@ -1,0 +1,109 @@
+@import 'Styles/mixins';
+
+.toggleWrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows $transitionMedium;
+
+  &[data-visible='true'] {
+    grid-template-rows: 1fr;
+  }
+}
+
+.toggleInner {
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+  gap: calc(var(--space-4) * 0.5);
+
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  }
+
+  .entry {
+    color: var(--col-text);
+    border: none;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    .thumb {
+      width: 100%;
+      transition: $transitionFast;
+    }
+
+    .title {
+      background-color: var(--col-bg);
+      padding: var(--space-1);
+      z-index: 10;
+      position: relative;
+      flex: 1;
+      font-size: small;
+    }
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--col-primary-highlight);
+
+      .thumb {
+        scale: 2;
+      }
+    }
+
+    &:focus-visible {
+      // prevent the outline, that the browser adds, from being cut off at the edges of the portfolio
+      scale: 0.9;
+    }
+  }
+}
+
+.detailView {
+  background-color: var(--col-bg);
+
+  hr {
+    border-top: 1px solid var(--col-text);
+  }
+
+  .closeButton {
+    width: 100%;
+    background-color: transparent;
+    color: var(--col-text);
+    padding: var(--space-1);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    gap: var(--space-1);
+
+    .icon svg {
+      height: var(--icon-size-base);
+    }
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--col-primary-highlight);
+    }
+  }
+
+  .content {
+    padding: var(--space-4);
+  }
+
+  .media {
+    margin-top: var(--space-4);
+    img {
+      width: 100%;
+    }
+  }
+}

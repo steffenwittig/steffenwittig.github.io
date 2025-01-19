@@ -1,7 +1,12 @@
+@import 'Styles/mixins';
+
 .button {
-  padding: calc(var(--space) * 0.3) calc(var(--space) * 0.5);
+  padding: var(--space-1) var(--space-2);
   cursor: pointer;
   border: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
 }
 
 .default {
@@ -33,4 +38,8 @@
   &:hover {
     color: var(--col-text);
   }
+}
+
+.icon svg {
+  height: var(--icon-size-base);
 }

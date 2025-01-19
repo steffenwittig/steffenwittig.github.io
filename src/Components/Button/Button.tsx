@@ -7,9 +7,10 @@ type ButtonProps = {
   onClick?: () => void
   variant?: 'border' | 'link'
   to?: string
+  icon?: JSX.Element
 }
 
-export const Button = ({ title, onClick, variant, to, children }: PropsWithChildren<ButtonProps>) => {
+export const Button = ({ title, onClick, variant, to, icon, children }: PropsWithChildren<ButtonProps>) => {
   const navigate = useNavigate()
 
   const classes = [styles.button, variant ? styles[variant] : '']
@@ -20,8 +21,9 @@ export const Button = ({ title, onClick, variant, to, children }: PropsWithChild
   }
 
   return (
-    <button title={title} onClick={handleClick} className={classes.join(' ')} role="button">
-      {children ? children : title}
+    <button title={title} onClick={handleClick} className={classes.join(' ')}>
+      {icon && <div className={styles.icon}>{icon}</div>}
+      <div>{children ? children : title}</div>
     </button>
   )
 }

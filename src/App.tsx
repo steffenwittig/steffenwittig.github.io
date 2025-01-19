@@ -1,5 +1,6 @@
 import { Theme, useTheme } from 'Hooks/useTheme'
 import { Layout } from 'Layout'
+import { Comics2024Page } from 'Pages/ArtPortfolio/Comics/2024/Comics2024Page'
 import { TechPortfolioPage } from 'Pages/TechPortfolio/TechPortfolioPage'
 import { Outlet, RouterProvider, createHashRouter } from 'react-router-dom'
 import { ArtPortfolioPage } from './Pages/ArtPortfolio/ArtPortfolioPage'
@@ -25,6 +26,11 @@ const router = createHashRouter([
         path: '/art',
         element: <ArtPortfolioPage />,
         handle: { title: 'NotSteffenWittig Art' },
+      },
+      {
+        path: '/art/comics/2024',
+        element: <Comics2024Page />,
+        handle: { title: 'NotSteffenWittig Comics 2024' },
       },
       {
         path: '/tech',

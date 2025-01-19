@@ -1,17 +1,16 @@
 import { ChevronDown } from '@styled-icons/boxicons-regular'
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { TextTag } from 'types'
 import styles from './FAQ.module.scss'
-
-type QuestionTagType = 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 
 export type FaqItem = {
   id: string
   question: string
   answer: JSX.Element
-  questionTag?: QuestionTagType
+  questionTag?: TextTag
 }
 
-export const FAQ = ({ items, questionTag }: { items: FaqItem[]; questionTag?: QuestionTagType }) => {
+export const FAQ = ({ items, questionTag }: { items: FaqItem[]; questionTag?: TextTag }) => {
   return (
     <>
       {items.map((item) => (

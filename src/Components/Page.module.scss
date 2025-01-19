@@ -1,13 +1,14 @@
-@import 'Styles/mixins.scss';
+@import 'Styles/mixins';
 
 .page {
-  @include container-full;
+  @include container-full();
+  flex: 1;
 }
 
 .pageContent {
-  @include box-shadow;
+  @include box-shadow();
   background-color: var(--col-bg-light);
-  padding: var(--space);
-  margin: 0 var(--space);
+  padding: var(--space-4);
+  margin: 0 var(--space-4);
   overflow: scroll;
 }

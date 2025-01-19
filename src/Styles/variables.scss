@@ -14,7 +14,11 @@ $darker-grey: mix($dark-grey, $black, 60%);
 
 // Sizes for layout
 $fontsize-base: 14px;
-$spacer: 2rem;
+$space: 0.5rem;
 $breakpoint-sm: 480px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 1280px;
+
+// other cool stuff
+$transitionFast: var(--transition-duration-base) var(--anim-ease-func);
+$transitionMedium: calc(var(--transition-duration-base) * 2) var(--anim-ease-func);

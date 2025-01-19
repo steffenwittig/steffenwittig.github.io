@@ -1,9 +1,8 @@
-import { Portfolio, PortfolioCardProps } from 'Components/Portfolio/Portfolio'
-
 import emofaniPreview from 'Assets/Portfolio/Thumbnails/Tech/emofani_preview.jpg'
 import portfolioPreview from 'Assets/Portfolio/Thumbnails/Tech/portfolio_preview.webp'
 import { Button } from 'Components/Button/Button'
 import { Page } from 'Components/Page'
+import { Portfolio, PortfolioCardProps } from 'Components/Portfolio/Portfolio'
 
 const links: PortfolioCardProps[] = [
   {
@@ -33,6 +32,21 @@ const links: PortfolioCardProps[] = [
           Some time ago I decided I needed a portfolio that does exactly what I need. Not more, not less. So I started
           working on the little single page application that you are currently viewing.
         </p>
+        <p>Cool Features:</p>
+        <ul>
+          <li>
+            In the top right corner, there is a little face. You can click it to toggle the light/dark theme of the
+            website. By default it will use the theme, that your system/browser is using. Why is it a face and not the
+            usual full or half-filled brightness-icons? Well, it is simple. You see: I wanted you to click it to see how
+            amazing both themes look.
+          </li>
+          <li>
+            I wanted to implement all components myself and use as little external dependencies as possible as a
+            contract to the work I do on a daily basis for my employer. You see, re-inventing the wheel isn't very
+            economical, so doing this kind of (fun) stuff is really rare for me otherwise. But this is my own project
+            and I can be as wasteful with my free time, as I want!
+          </li>
+        </ul>
       </>
     ),
     linkTitle: 'View Code on GitHub',

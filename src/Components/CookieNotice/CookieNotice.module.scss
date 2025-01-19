@@ -1,5 +1,5 @@
-@import '../../Styles/variables.scss';
-@import '../../Styles/mixins.scss';
+@import 'Styles/variables';
+@import 'Styles/mixins';
 
 .outer {
   @include container-full;
@@ -7,8 +7,8 @@
 
 .notice {
   background: var(--col-bg-light);
-  padding: var(--space);
-  margin: var(--space);
+  padding: var(--space-4);
+  margin: var(--space-4);
   font-size: small;
 }
 
