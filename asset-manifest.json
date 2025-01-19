@@ -1,9 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.410f2620.css",
-    "main.js": "/static/js/main.63058144.js",
+    "main.css": "/static/css/main.7068a578.css",
+    "main.js": "/static/js/main.6eb874a8.js",
     "static/media/yt_thumb_bg.gif": "/static/media/yt_thumb_bg.8084bddd6e0cfe5d1eb8.gif",
-    "static/media/insta_thumb_bg.gif": "/static/media/insta_thumb_bg.05739c6eff5e82f73732.gif",
     "static/media/portfolio_preview.webp": "/static/media/portfolio_preview.8270510005a72dddcaf4.webp",
     "static/media/emofani_preview.jpg": "/static/media/emofani_preview.0031f6ca6feb72dd78a2.jpg",
     "static/media/steffenwittig.webp": "/static/media/steffenwittig.7e8447ce488d56924db1.webp",
@@ -16,11 +15,11 @@
     "static/media/quicksand-vietnamese-300-normal.woff": "/static/media/quicksand-vietnamese-300-normal.ed4e0f9a27c50e2828d2.woff",
     "static/media/quicksand-vietnamese-300-normal.woff2": "/static/media/quicksand-vietnamese-300-normal.db627d49d61c1a2fc301.woff2",
     "index.html": "/index.html",
-    "main.410f2620.css.map": "/static/css/main.410f2620.css.map",
-    "main.63058144.js.map": "/static/js/main.63058144.js.map"
+    "main.7068a578.css.map": "/static/css/main.7068a578.css.map",
+    "main.6eb874a8.js.map": "/static/js/main.6eb874a8.js.map"
   },
   "entrypoints": [
-    "static/css/main.410f2620.css",
-    "static/js/main.63058144.js"
+    "static/css/main.7068a578.css",
+    "static/js/main.6eb874a8.js"
   ]
 }
