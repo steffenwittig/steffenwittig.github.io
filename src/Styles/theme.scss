@@ -6,6 +6,7 @@ Nope. After many years of working with CSS/UI frameworks I wanted to experience 
 
 @import './variables';
 @import '@fontsource/quicksand/300.css';
+@import '@fontsource/quicksand/500.css';
 
 @mixin spacing($factor) {
   --space-#{$factor}: calc(#{$space} * #{$factor});
@@ -16,10 +17,12 @@ color vars
 */
 
 :root {
-  --col-bg: #{$black};
+  --col-bg: #{$darkest-grey};
   --col-text: #{$white};
+  --col-bg-dark: #{$black};
   --col-bg-light: #{$darker-grey};
   --col-primary: #{$cyan};
+  --col-secondary: #{$magenta};
   --col-text-on-primary: #{$black};
   --col-primary-highlight: #{$cyan-dark};
   --col-text-on-primary-highlight: #{$white};
@@ -27,10 +30,12 @@ color vars
 }
 
 [data-theme='light'] {
-  --col-bg: #{$lighter-grey};
+  --col-bg: #{$lightest-grey};
   --col-text: #{$black};
+  --col-bg-dark: #{$lighter-grey};
   --col-bg-light: #{$white};
   --col-primary: #{$cyan-dark};
+  --col-secondary: #{$magenta};
   --col-text-on-primary: #{$white};
   --col-primary-highlight: #{$cyan};
   --col-text-on-primary-highlight: #{$black};
@@ -60,6 +65,7 @@ basic styles
 body {
   margin: 0;
   background-color: $black;
+  font-weight: 300;
 }
 
 .app {
@@ -68,7 +74,7 @@ body {
   color: var(--col-text);
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 a {

@@ -4,22 +4,21 @@
   @include box-shadow;
   background-color: var(--col-bg-light);
   padding: var(--space-4) var(--space-4);
-  @include flex;
+  @include flex();
   justify-content: space-between;
   @media (min-width: $breakpoint-md) {
-    @include flex;
+    @include flex-center();
   }
-  align-items: flex-start;
 }
 
 .nav {
   width: 100%;
   @media (min-width: $breakpoint-md) {
-    @include flex;
+    @include flex-center();
   }
 
   ul {
-    @include flex;
+    @include flex();
     padding: 0;
     margin: 0;
   }

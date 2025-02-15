@@ -6,7 +6,7 @@ import styles from './FAQ.module.scss'
 export type FaqItem = {
   id: string
   question: string
-  answer: JSX.Element
+  answer: React.JSX.Element
   questionTag?: TextTag
 }
 

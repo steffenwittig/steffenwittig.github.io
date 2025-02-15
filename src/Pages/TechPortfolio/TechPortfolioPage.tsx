@@ -9,7 +9,10 @@ const links: PortfolioCardProps[] = [
     title: 'Emofani',
     description: (
       <>
-        <p>Emofani stands for "Emotion Model based Face Animation"</p>
+        <p>
+          Emofani stands for "<strong>E</strong>motion <strong>Mo</strong>del based <strong>F</strong>acial{' '}
+          <strong>Ani</strong>mation"
+        </p>
         <p>
           It was a project that I've worked on as part of my Bachelor's Thesis around 2016. If you want to learn more,
           please have a look at the GitHub project.

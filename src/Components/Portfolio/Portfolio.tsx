@@ -9,8 +9,8 @@ type PortfolioCardLinkProps = {
 }
 
 export type PortfolioCardProps = PortfolioCardLinkProps & {
-  description: JSX.Element | string
-  icon?: JSX.Element
+  description: React.JSX.Element | string
+  icon?: React.JSX.Element
   backgroundImage?: string
 }
 

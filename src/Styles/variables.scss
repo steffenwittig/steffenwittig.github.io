@@ -9,8 +9,10 @@ $cyan-dark: #1088a3;
 $magenta: #fa0862;
 $light-grey: #b4a9bb;
 $dark-grey: #433d51;
-$lighter-grey: mix($white, $light-grey, 70%);
+$lighter-grey: mix($white, $light-grey, 77%);
+$lightest-grey: mix($white, $light-grey, 86%);
 $darker-grey: mix($dark-grey, $black, 60%);
+$darkest-grey: mix($dark-grey, $black, 40%);
 
 // Sizes for layout
 $fontsize-base: 14px;

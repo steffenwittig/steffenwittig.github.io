@@ -20,13 +20,17 @@
 
 @mixin flex {
   display: flex;
-  gap: var(--space-4);
+  gap: var(--space-2);
+}
+
+@mixin flex-center {
+  @include flex();
   align-items: center;
 }
 
-@mixin flex-sm {
-  @include flex;
-  gap: var(--space-2);
+@mixin flex-column {
+  @include flex();
+  flex-direction: column;
 }
 
 @mixin box-shadow {

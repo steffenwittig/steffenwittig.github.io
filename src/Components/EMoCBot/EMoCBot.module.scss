@@ -1,0 +1,84 @@
+@import 'Styles/mixins.scss';
+
+@mixin message {
+  padding: var(--space-1);
+  width: 60%;
+}
+
+.outer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: var(--col-bg-light);
+  @include box-shadow;
+  z-index: 499;
+
+  width: 60%;
+  max-width: 24rem;
+
+  &[data-is-expanded='false'] {
+    .messageArea,
+    .inputArea {
+      height: 0;
+    }
+  }
+
+  &:not([data-is-expanded='false']) {
+    .messageArea,
+    .inputArea {
+      padding: var(--space-2);
+    }
+  }
+}
+
+.headerArea {
+  @include flex-center;
+  background-color: var(--col-bg-dark);
+
+  .face {
+    background: var(--col-secondary);
+    aspect-ratio: 1;
+    height: 100%;
+
+    path {
+      stroke: var(--col-text);
+    }
+
+    circle {
+      fill: var(--col-text);
+    }
+  }
+
+  .title {
+    flex: 1;
+  }
+
+  .toggle {
+    height: 100%;
+    aspect-ratio: 1;
+    height: var(--icon-size-base);
+    margin: var(--space-2);
+  }
+}
+
+.messageArea {
+  @include flex-column();
+  height: 50vh;
+  overflow-y: scroll;
+
+  .messageFromBot {
+    @include message;
+    background-color: var(--col-bg);
+  }
+
+  .messageFromUser {
+    @include message;
+    background-color: var(--col-bg);
+    margin-left: auto;
+  }
+}
+
+.inputArea {
+  @include flex-column;
+  background-color: var(--col-bg-dark);
+}

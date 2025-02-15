@@ -8,6 +8,7 @@ h2,
 h3 {
   margin-top: 0;
   margin-bottom: var(--space-2);
+  font-weight: 300;
 }
 
 h1 {
@@ -25,4 +26,8 @@ h3 {
 hr {
   margin: var(--space-2) 0;
   border: none;
+}
+
+strong {
+  font-weight: 500;
 }

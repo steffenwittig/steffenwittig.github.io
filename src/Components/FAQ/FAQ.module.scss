@@ -17,8 +17,8 @@ $iconSize: 2.2rem;
   }
 }
 .header {
-  @include flex;
-  @include unbutton;
+  @include flex-center();
+  @include unbutton();
   font-size: large;
   cursor: pointer;
 

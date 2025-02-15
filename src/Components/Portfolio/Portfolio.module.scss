@@ -4,8 +4,7 @@
 $innerMargin: var(--space-2);
 
 .grid {
-  @include flex();
-  flex-direction: column;
+  @include flex-column();
 }
 
 .card {
@@ -19,8 +18,7 @@ $innerMargin: var(--space-2);
 }
 
 .layout {
-  @include flex;
-  flex-direction: column;
+  @include flex-column();
   align-items: start;
 
   @media (min-width: $breakpoint-md) {

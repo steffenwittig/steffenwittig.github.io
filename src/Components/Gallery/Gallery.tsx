@@ -12,7 +12,7 @@ export type GalleryImageProps = {
 export type GalleryEntry = {
   id: string
   title: string
-  description?: string | JSX.Element
+  description?: string | React.JSX.Element
   images: GalleryImageProps[]
   thumbnail: URL
 }
@@ -73,7 +73,7 @@ const EntryDetail = ({ id, title, description, images: imageUrls, titleTag: Titl
       // media is placed in DOM after EntryDetail became visible once and stays in the DOM afterwards
       setRenderMedia(true)
     }
-  }, [hash, setIsVisible])
+  }, [id, renderMedia, hash, setIsVisible])
 
   return (
     <div className={styles.toggleWrapper} data-visible={isVisible}>

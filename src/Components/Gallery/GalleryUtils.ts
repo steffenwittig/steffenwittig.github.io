@@ -5,7 +5,7 @@ const baseUrl = 'https://p.steffenwittig.com/comics/'
 
 export type ComicEntry = {
   title: string
-  description?: string | JSX.Element
+  description?: string | React.JSX.Element
   year: number
   month: number
   day: number
