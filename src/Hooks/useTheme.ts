@@ -1,4 +1,4 @@
-import useLocalStorageState from 'use-local-storage-state'
+import { useLocalStorage } from '@uidotdev/usehooks'
 import usePrefersColorScheme from 'use-prefers-color-scheme'
 
 export enum Theme {
@@ -9,7 +9,5 @@ export enum Theme {
 export const useTheme = () => {
   const prefersColorScheme = usePrefersColorScheme()
 
-  return useLocalStorageState<Theme>('theme', {
-    defaultValue: prefersColorScheme === 'light' ? Theme.light : Theme.dark,
-  })
+  return useLocalStorage<Theme>('theme', prefersColorScheme === 'light' ? Theme.light : Theme.dark)
 }

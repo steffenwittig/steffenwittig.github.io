@@ -10,20 +10,31 @@ export type EmoCBotMessageProps = {
   id: string
   sender: EmoCBotMessageSender
   text: string
+  delay?: number
 }
 
-export const EmoCBotMessage = ({ sender, text, id }: EmoCBotMessageProps) => {
-  const [hasScrolled, setHasScrolled] = useState<boolean>(false)
+export const EmoCBotMessage = ({ sender, text, id, delay }: EmoCBotMessageProps) => {
+  const [hasInitialized, setHasInitialized] = useState<boolean>(false)
+  const [isThinking, setIsThinking] = useState<boolean>(delay !== undefined && delay > 0)
   const elem = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    if (!hasScrolled) {
+    if (!hasInitialized && !isThinking) {
       if (elem.current) {
         elem.current.scrollIntoView({ behavior: 'smooth' })
       }
-      setHasScrolled(true)
+      setHasInitialized(true)
     }
-  }, [hasScrolled, setHasScrolled])
+  }, [isThinking, hasInitialized, setHasInitialized])
+
+  useEffect(() => {
+    if (delay) {
+      const timer = setTimeout(() => {
+        setIsThinking(false)
+      }, delay)
+      return () => clearTimeout(timer)
+    }
+  }, [])
 
   return (
     <div
@@ -31,8 +42,7 @@ export const EmoCBotMessage = ({ sender, text, id }: EmoCBotMessageProps) => {
       data-message-id={id}
       ref={elem}
     >
-      {hasScrolled}
-      {text}
+      {isThinking ? <span>...</span> : text}
     </div>
   )
 }

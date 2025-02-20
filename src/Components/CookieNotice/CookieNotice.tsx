@@ -1,6 +1,6 @@
+import { useLocalStorage } from '@uidotdev/usehooks'
 import { Button } from 'Components/Button/Button'
 import { useEffect, useState } from 'react'
-import useLocalStorageState from 'use-local-storage-state'
 import styles from './CookieNotice.module.scss'
 
 enum CookieNoticeState {
@@ -12,9 +12,7 @@ enum CookieNoticeState {
 
 const Elements = () => {
   const [state, setState] = useState<CookieNoticeState>()
-  const [storedState, setStoredState] = useLocalStorageState<CookieNoticeState>('cookieState', {
-    defaultValue: CookieNoticeState.INITIAL,
-  })
+  const [storedState, setStoredState] = useLocalStorage<CookieNoticeState>('cookieState', CookieNoticeState.INITIAL)
 
   function hideAndSave(): void {
     // we only want to save if the banner was hidden, not the "inbetween" states
@@ -71,7 +69,7 @@ const Elements = () => {
 
 export const CookieNotice = () => {
   return (
-    <div className={styles.outer}>
+    <div className={styles.outer} data-cookie-notice>
       <Elements />
     </div>
   )

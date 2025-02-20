@@ -1,40 +1,28 @@
 import { MinusCircle } from '@styled-icons/boxicons-regular'
+import { useLocalStorage } from '@uidotdev/usehooks'
 import { Button } from 'Components/Button/Button'
 import { useRef, useState } from 'react'
-import useLocalStorageState from 'use-local-storage-state'
 import styles from './EMoCBot.module.scss'
 import { Option, tree } from './EMoCBotDialogue'
 import { EmoCBotMessage, EmoCBotMessageProps, EmoCBotMessageSender } from './EMoCBotMessage'
 import { EMoCFace, EmoCFaceProps } from './EMoCFace'
 
 const DEFAULT_TREE_ID = 'intro'
-const MAX_LOG_LENGTH = 4
+const MAX_LOG_LENGTH = 8
 
 function getValidOptions(options: Option[]) {
   return options.filter((option) => !option.condition || option.condition())
 }
 
 export const EMoCBot = () => {
-  const [messages, setMessages] = useLocalStorageState<EmoCBotMessageProps[]>('bot.messages', {
-    defaultValue: [{ id: DEFAULT_TREE_ID, sender: EmoCBotMessageSender.Bot, text: tree[DEFAULT_TREE_ID].text }],
-  })
-  const [dialogueId, setDialogueId] = useLocalStorageState<string>('bot.dialogueId', {
-    defaultValue: 'intro',
-  })
+  const [messages, setMessages] = useLocalStorage<EmoCBotMessageProps[]>('bot.messages', [
+    { id: DEFAULT_TREE_ID, sender: EmoCBotMessageSender.Bot, text: tree[DEFAULT_TREE_ID].text },
+  ])
+  const [dialogueId, setDialogueId] = useLocalStorage<string>('bot.dialogueId', 'intro')
 
   const [isExpanded, setIsExpanded] = useState<boolean>(true)
   const [options, setOptions] = useState<Option[]>(getValidOptions(tree[DEFAULT_TREE_ID].options))
   const messageArea = useRef<HTMLDivElement>(null)
-
-  const pushMessage = (message: EmoCBotMessageProps) => {
-    setMessages((prevMessages) => {
-      const newMessages = [...prevMessages, message]
-      if (newMessages.length > MAX_LOG_LENGTH) {
-        newMessages.shift()
-      }
-      return newMessages
-    })
-  }
 
   const onOptionSelect = (option: Option) => {
     setOptions([])
@@ -51,22 +39,34 @@ export const EMoCBot = () => {
       option.action()
     }
 
+    const delay = 1000
+
     const newMessageBot: EmoCBotMessageProps = {
       id: 'bot' + Date.now().toString(),
       sender: EmoCBotMessageSender.Bot,
       text: next.text,
+      delay,
     }
 
-    pushMessage(newMessageUser)
+    setMessages((prevMessages) => {
+      const newMessages = [
+        ...prevMessages.map((message) => {
+          return { ...message, delay: 0 }
+        }),
+        newMessageUser,
+        newMessageBot,
+      ]
+      while (newMessages.length > MAX_LOG_LENGTH) {
+        newMessages.shift()
+      }
+      return newMessages
+    })
+
     setDialogueId(nextId)
 
-    setTimeout(
-      () => {
-        pushMessage(newMessageBot)
-        setOptions(getValidOptions(next.options))
-      },
-      1000 + Math.random() * 1000
-    )
+    setTimeout(() => {
+      setOptions(getValidOptions(next.options))
+    }, delay)
   }
 
   const faceProps: EmoCFaceProps = {

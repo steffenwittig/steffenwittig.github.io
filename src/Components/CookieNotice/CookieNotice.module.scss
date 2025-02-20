@@ -6,6 +6,7 @@
 }
 
 .notice {
+  @include box-shadow;
   background: var(--col-bg-light);
   padding: var(--space-4);
   margin: var(--space-4);

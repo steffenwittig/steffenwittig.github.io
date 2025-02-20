@@ -25,6 +25,9 @@ const defaultOptions: Option[] = [
   {
     action: () => {
       localStorage.setItem('cookieState', '1')
+      setTimeout(() => {
+        document.querySelector('[data-cookie-notice]')?.scrollIntoView({ behavior: 'smooth' })
+      }, 100)
     },
     condition: () => localStorage.getItem('cookieState') === '0',
     text: 'Can you please show the cookie notification again?',
