@@ -1,7 +1,7 @@
-import { MinusCircle } from '@styled-icons/boxicons-regular'
 import { useLocalStorage } from '@uidotdev/usehooks'
 import { Button } from 'Components/Button/Button'
 import { useEffect, useRef, useState } from 'react'
+import { Maximize2, Minimize2 } from 'styled-icons/feather'
 import styles from './EMoCBot.module.scss'
 import { Option, tree } from './EMoCBotDialogue'
 import { EmoCBotMessage, EmoCBotMessageProps, EmoCBotMessageSender } from './EMoCBotMessage'
@@ -89,7 +89,7 @@ export const EMoCBot = () => {
           <EMoCFace {...faceProps} />
           <div className={styles.title}>EmoCBot</div>
           <Button variant="link" title={'Close'} onClick={() => setIsExpanded(!isExpanded)} aria-expanded={isExpanded}>
-            <MinusCircle className={styles.toggle} />
+            <div className={styles.toggle}>{isExpanded ? <Minimize2 /> : <Maximize2 />}</div>
           </Button>
         </div>
         <div className={styles.messageArea}>
